@@ -1,0 +1,48 @@
+<nav id="nav">
+  <ul class="right ">
+  </ul>
+   <ul id="slide-out" class="side-nav fixed">
+    <div class="nav-container">
+        <li class="center-align">
+        {{#link-to 'profile' id="profile-link"}}
+            <li id="profile-icon" class="fa fa-user fa-3x">
+            </li>
+                <p>Profile</p>
+        {{/link-to}}
+        </li>
+        <li class="link-main">{{#link-to 'overview' class="link-main"}}Overview{{/link-to}}</li>
+
+        {{#each class in classes}}
+            <li>
+                {{#link-to 'index'}} {{class.title}} - {{class.grade}} {{/link-to}}
+            </li>
+        {{/each}}
+
+        <li class="center-align">
+        {{#link-to 'new' id="add-link"}}
+            <li id="add-icon" class="fa fa-plus-circle fa-2x">
+            </li>
+            <br>Add Class
+        {{/link-to}}
+        </li>
+        <li><a class="waves-effect waves-light btn">Import Schedule</a></li>
+        <li><a class="waves-effect waves-light btn">Logout</a></li>
+    </div>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+</nav>
+
+<div id="main">
+    {{outlet}}
+</div>
+
+
+<!-- <div id="content"class="row">
+    <div class="col s12">
+        <h1>Index</h1>
+
+        <h3>{{schedule.title}}</h3>
+
+    </div>
+</div>
+ -->

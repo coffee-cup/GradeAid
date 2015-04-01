@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Hello World",
+  "version": "2.1",
+  "minimum_chrome_version": "23",
+  "icons": {
+    "16": "chrome-icon.png",
+    "128": "chrome-icon-lg.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}

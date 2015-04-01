@@ -1,0 +1,30 @@
+{
+  "schedule": {
+    "id": "abc",
+    "title": "Schedule 1",
+    "classes": [
+      {
+        "id": "def",
+        "title": "Math",
+        "grade": 100,
+        "colour": "red",
+        "components": [
+          {
+            "id": "efg",
+            "title": "Assignment/Midterm/Lab/Exam",
+            "grade": 100,
+            "marks": [
+              {
+                "id": "hij",
+                "title": "Assignment 1/Midterm 1/Lab 1/Exam 1",
+                "grade": "100",
+                "due": null,
+                "reminder": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

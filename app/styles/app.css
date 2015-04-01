@@ -1,0 +1,47 @@
+#nav {
+    height: 120px;
+}
+
+#content {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#slide-out {
+    overflow-y: auto;
+}
+
+#nav-buttons {
+    margin-top: 0.5em;
+}
+
+#profile-icon {
+    color: grey;
+}
+
+#add-icon {
+    color: grey;
+
+}
+
+#add-link {
+
+}
+
+#profile-link {
+    padding-top: 1.8em;
+}
+
+.link-main {
+    font-weight: 600;
+}
+
+header, #content, footer {
+    margin-left: 240px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, #content, footer {
+      margin-left: 0;
+    }
+  }
