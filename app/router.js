@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('import');
   this.route('signin');
   this.route('logout');
+  this.route('login');
   this.route('new');
   // this.route('class', {path: '/class/:class_id'});
 });
