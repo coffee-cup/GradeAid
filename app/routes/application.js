@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
-var scope = {
-  this: null
-}
+// var scope = {
+//   this: null
+// };
 
 export default Ember.Route.extend({
   // setupController: function(controller, model) {

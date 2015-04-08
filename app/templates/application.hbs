@@ -3,13 +3,13 @@
   </ul>
    <ul id="slide-out" class="side-nav fixed">
     <div class="nav-container">
-        <li class="center-align">
+<!--         <li class="center-align">
         {{#link-to 'profile' id="profile-link"}}
             <li id="profile-icon" class="fa fa-user fa-3x">
             </li>
                 <p>Profile {{test}}</p>
         {{/link-to}}
-        </li>
+        </li> -->
         <li class="link-main">{{#link-to 'overview' class="link-main"}}Overview{{/link-to}}</li>
 
         {{#each class in classes}}
@@ -25,8 +25,8 @@
             <br>Add Class
         {{/link-to}}
         </li>
-        <li><a class="waves-effect waves-light btn">Import Schedule</a></li>
-        <li><a class="waves-effect waves-light btn">Logout</a></li>
+        <!-- <li>{{#link-to 'import' class="waves-effect waves-light btn"}} Import Schedule{{/link-to}}</li>
+        <li><a class="waves-effect waves-light btn">Logout</a></li> -->
     </div>
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>

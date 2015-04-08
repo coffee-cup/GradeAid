@@ -13,14 +13,6 @@
     }
   },
   "permissions": [
-    "identity",
-    "https://accounts.google.com/*",
-    "https://www.googleapis.com/*"
-  ],
-  "oauth2": {
-    "client_id": "149851837913-lqk3l9otkt3kavgksei43fffr2bg3o24.apps.googleusercontent.com",
-    "scopes": [
-      "https://www.googleapis.com/auth/drive"
-    ]
-  }
+    "storage"
+  ]
 }

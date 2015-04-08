@@ -31,17 +31,21 @@
 #profile-link {
     padding-top: 1.8em;
 }
-
+#new-header {
+  /*background-color: red;*/
+  height: 120px;
+  margin-top: 1em;
+}
 .link-main {
     font-weight: 600;
 }
 
-header, #content, footer {
+header, #main, footer {
     margin-left: 240px;
   }
 
   @media only screen and (max-width : 992px) {
-    header, #content, footer {
+    header, #main, footer {
       margin-left: 0;
     }
   }
