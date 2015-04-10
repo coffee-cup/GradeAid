@@ -1,0 +1,2144 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sc",
+				"schedule"
+			],
+			[
+				"send",
+				"sendResponse〔argument〕"
+			],
+			[
+				"meth",
+				"open(method, url)"
+			],
+			[
+				"int",
+				"interactive〔argument〕"
+			],
+			[
+				"ava",
+				"availHeight〔variable〕"
+			],
+			[
+				"center",
+				"centery"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"ted",
+				"text-decoration"
+			],
+			[
+				"loca",
+				"localMediaStream"
+			],
+			[
+				"visu",
+				"visualizerPage"
+			],
+			[
+				"const",
+				"constraints"
+			],
+			[
+				"audio",
+				"audio_constraints"
+			],
+			[
+				"tab",
+				"tabCapture"
+			],
+			[
+				"captru",
+				"captureTabAudio"
+			],
+			[
+				"captur",
+				"capturing"
+			],
+			[
+				"vidoe",
+				"video_obj"
+			],
+			[
+				"re",
+				"reverse_five_by_five"
+			],
+			[
+				"sw",
+				"swap"
+			],
+			[
+				"rever",
+				"reverse_five_by_five"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"pos",
+				"pos-r	position: relative;"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"get",
+				"getAllQueue"
+			],
+			[
+				"$sc",
+				"$scope	AngularJS"
+			],
+			[
+				"con",
+				"connected"
+			],
+			[
+				"track",
+				"tracks"
+			],
+			[
+				"trac",
+				"tracks"
+			],
+			[
+				"has",
+				"hashCode"
+			],
+			[
+				"use",
+				"useThumbnail"
+			],
+			[
+				"tracks",
+				"tracks"
+			],
+			[
+				"queue",
+				"queue_end_time"
+			],
+			[
+				"queu",
+				"queue_end_time"
+			],
+			[
+				"sta",
+				"statusCode"
+			],
+			[
+				"q",
+				"queuetime"
+			],
+			[
+				"que",
+				"queue_end_time"
+			],
+			[
+				"video",
+				"video_id"
+			],
+			[
+				"page",
+				"page_id"
+			],
+			[
+				"pa",
+				"page_id"
+			],
+			[
+				"ge",
+				"generate"
+			],
+			[
+				"s",
+				"shortId"
+			],
+			[
+				"$loca",
+				"$location	AngularJS"
+			],
+			[
+				"$loc",
+				"$location	AngularJS"
+			],
+			[
+				"$route",
+				"$routeParams	AngularJS"
+			],
+			[
+				"laod",
+				"loadNextVideo"
+			],
+			[
+				"saf",
+				"safeApply"
+			],
+			[
+				"app",
+				"safeApply"
+			],
+			[
+				"pl",
+				"playing"
+			],
+			[
+				"no",
+				"noResults"
+			],
+			[
+				"sera",
+				"search_results"
+			],
+			[
+				"load",
+				"loadNextVideo"
+			],
+			[
+				"vid",
+				"video_obj"
+			],
+			[
+				"create",
+				"createElement  (function)"
+			],
+			[
+				"lh",
+				"line-height"
+			],
+			[
+				"m",
+				"m-a	margin: auto;"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"yout",
+				"youtube_id"
+			],
+			[
+				"tra",
+				"trackmatches"
+			],
+			[
+				"socke",
+				"socket_id"
+			],
+			[
+				"pro",
+				"processTracks"
+			],
+			[
+				"artist",
+				"artistmatches"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"a",
+				"artist"
+			],
+			[
+				"API",
+				"API_ROOT"
+			],
+			[
+				"ind",
+				"index_route"
+			],
+			[
+				"sy",
+				"synced_folder"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"name",
+				"name_id"
+			],
+			[
+				"iage",
+				"imagesize"
+			],
+			[
+				"image",
+				"imagesize"
+			],
+			[
+				"as",
+				"async"
+			],
+			[
+				"photo",
+				"photoExists"
+			],
+			[
+				"acd",
+				"acdDir"
+			],
+			[
+				"sour",
+				"source_dir_grandchild"
+			],
+			[
+				"sou",
+				"source_dir_child"
+			],
+			[
+				"phot",
+				"photoExists"
+			],
+			[
+				"fail",
+				"failure"
+			],
+			[
+				"gen",
+				"generateHash"
+			],
+			[
+				"ser",
+				"serial_no"
+			],
+			[
+				"dev",
+				"device_name"
+			],
+			[
+				"D",
+				"Device_Name"
+			],
+			[
+				"de",
+				"device_name"
+			],
+			[
+				"CN",
+				"CHUNK"
+			],
+			[
+				"time",
+				"time_info"
+			],
+			[
+				"log",
+				"log10"
+			],
+			[
+				"n",
+				"nFFT"
+			],
+			[
+				"frame",
+				"frame_count"
+			],
+			[
+				"fra",
+				"frame_count"
+			],
+			[
+				"f",
+				"fourier"
+			],
+			[
+				"sam",
+				"sample_rate"
+			],
+			[
+				"fo",
+				"fourier"
+			],
+			[
+				"ex",
+				"exit  (function)"
+			],
+			[
+				"py",
+				"pyplot  (module)"
+			],
+			[
+				"ffty",
+				"ffty1"
+			],
+			[
+				"ff",
+				"ffty"
+			],
+			[
+				"cal",
+				"calculate_levels"
+			],
+			[
+				"tota",
+				"total_data"
+			],
+			[
+				"to",
+				"total_frames"
+			],
+			[
+				"tot",
+				"total_frames_read"
+			],
+			[
+				"ma",
+				"max_read"
+			],
+			[
+				"MA",
+				"MAX_MESSAGE_LENGTH"
+			],
+			[
+				"add",
+				"addToBlacklist"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"pag",
+				"pagedown"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"tru",
+				"trustAsHtml"
+			],
+			[
+				"new",
+				"newmsgs"
+			],
+			[
+				"mess",
+				"messagesLength"
+			],
+			[
+				"messag",
+				"messagesLength"
+			],
+			[
+				"Page",
+				"PageSchema"
+			],
+			[
+				"public",
+				"public_page_room"
+			],
+			[
+				"head",
+				"header_title_show"
+			],
+			[
+				"mail",
+				"mailOptions"
+			],
+			[
+				"GMAIL",
+				"GMAIL_USERNAME"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"random",
+				"randomColor"
+			],
+			[
+				"colo",
+				"colours"
+			],
+			[
+				"backgroundC",
+				"background-color:   (property)"
+			],
+			[
+				"msg",
+				"msg_height"
+			],
+			[
+				"scro",
+				"scrollTop  (function)"
+			],
+			[
+				"off",
+				"offset"
+			],
+			[
+				"offS",
+				"offsetParent"
+			],
+			[
+				"container",
+				"containerBottom"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/styles/app.css",
+			"settings":
+			{
+				"buffer_size": 785,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "new.hbs",
+			"settings":
+			{
+				"buffer_size": 969,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "seth",
+		"selected_items":
+		[
+			[
+				"seth",
+				"Set Syntax: HTML"
+			],
+			[
+				"less",
+				"Less Tabs: Close Old Tabs"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"close",
+				"Less Tabs: Close Old Tabs"
+			],
+			[
+				"tabs",
+				"Less Tabs: Close Old Tabs"
+			],
+			[
+				"setht",
+				"Set Syntax: HTML"
+			],
+			[
+				"tab",
+				"Less Tabs: Close Old Tabs"
+			],
+			[
+				"ri",
+				"AngularJS: Rebuild Search Index"
+			],
+			[
+				"snip",
+				"Snippet: html"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ali",
+				"AlignTab"
+			],
+			[
+				"setru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"ta",
+				"Less Tabs: Close Old Tabs"
+			],
+			[
+				"cl",
+				"Less Tabs: Close Old Tabs"
+			],
+			[
+				"setj",
+				"Set Syntax: JSON"
+			],
+			[
+				"sasb",
+				"SassBeautify"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"htm",
+				"HTMLBeautify"
+			],
+			[
+				"set ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"form",
+				"Format CSS: Expanded"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"setjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"sehm",
+				"Set Syntax: HTML"
+			],
+			[
+				"sethm",
+				"Set Syntax: HTML"
+			],
+			[
+				"sethml",
+				"Set Syntax: HTML"
+			],
+			[
+				"sjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"setjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"snh",
+				"Snippet: html"
+			],
+			[
+				"snipp html",
+				"Snippet: html"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"h",
+				"HTMLPrettify"
+			],
+			[
+				"set js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"packa sy",
+				"Package Syncing: Define Sync Folder"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"rmoe",
+				"Emmet: Remove Tag"
+			],
+			[
+				"col",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"setrub",
+				"Set Syntax: Ruby"
+			],
+			[
+				"colo",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"set c+",
+				"Set Syntax: C++"
+			],
+			[
+				"serub",
+				"Set Syntax: Ruby"
+			],
+			[
+				"lin",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"subl",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"sublime",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"INS",
+				"Package Control: Install Package"
+			],
+			[
+				"les",
+				"Less Tabs: Close Old Tabs"
+			],
+			[
+				"hml",
+				"HTMLPrettify"
+			],
+			[
+				"ht",
+				"HTMLPrettify"
+			],
+			[
+				"thml",
+				"BracketHighlighter: Jump to Left Bracket"
+			],
+			[
+				"hmtl",
+				"HTMLPrettify"
+			],
+			[
+				"HTML",
+				"HTMLPrettify"
+			],
+			[
+				"htyml",
+				"HTMLPrettify: Set Plugin Options"
+			],
+			[
+				"set sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"set an",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"sel",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"setjavs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set ja",
+				"Set Syntax: Java"
+			],
+			[
+				"set rub",
+				"Set Syntax: Ruby"
+			],
+			[
+				"pret",
+				"HTMLPrettify"
+			],
+			[
+				"set ruy",
+				"Set Syntax: Ruby"
+			],
+			[
+				"setpl",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set",
+				"Set Syntax: YAML"
+			],
+			[
+				"set yaml",
+				"Set Syntax: YAML"
+			],
+			[
+				"set obj",
+				"Set Syntax: Objective-C"
+			],
+			[
+				"colco",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"colors",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"selec",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"co",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"su",
+				"Sublimall: Upload"
+			],
+			[
+				"isnta",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"for",
+				"Format: Javascript"
+			],
+			[
+				"al",
+				"AlignTab"
+			],
+			[
+				"tabl",
+				"AlignTab: Table Mode"
+			],
+			[
+				"alig",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"alignm",
+				"Preferences: Alignment File Settings – Default"
+			],
+			[
+				"rel",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"set pl",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set txt",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set css",
+				"Set Syntax: CSS"
+			],
+			[
+				"javat",
+				"Preferences: Javatar Key Bindings – Default"
+			],
+			[
+				"tr",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"tra",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"t",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"clo",
+				"Less Tabs: Close Old Tabs"
+			],
+			[
+				"sulb",
+				"Sublimall: Upload"
+			],
+			[
+				"lor",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"dele",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"",
+				"BracketHighlighter: Toggle Global Enable"
+			],
+			[
+				"trail",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"reid",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"git pu",
+				"Git: Push"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"git",
+				"Git: Add Current File"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"gitad",
+				"Git: Add Current File"
+			],
+			[
+				"red",
+				"SublimeLinter: Enable Debug Mode"
+			],
+			[
+				"cur",
+				"Snippet: cursor:text"
+			],
+			[
+				"curs",
+				"Snippet: cursor:default"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 480.0
+	},
+	"console":
+	{
+		"height": 653.0,
+		"history":
+		[
+			"import urllib.request,os,sys; exec(\"if sys.version_info < (3,) or os.name != 'nt': raise OSError('This code is for Windows ST3 only!')\"); pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/styles",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public"
+	],
+	"file_history":
+	[
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/index.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/about.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/router.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/application.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/new.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/new.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/sftp-config.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/background.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/node_modules/ember-cli/lib/broccoli/custom-static-compiler.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/bower_components/ember-cli-shims/app-shims.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/import.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/import.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/index.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/background.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/package.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/manifest.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/application.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/application.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/new.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/profile.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/overview.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/overview.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/assets/auth.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/overview.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/profile.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/login.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/auth.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/dist/manifest.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/node_modules/ember-cli/node_modules/ember-router-generator/node_modules/recast/main.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/dist/background.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/assets/init.js",
+		"/C/Users/jakerunzer/Documents/Vagrant/VMS/soul_server/Vagrantfile",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/dist/assets/init.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/styles/app.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/bower.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/README.md",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/app/styles/materialize.min.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/app/js/init.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/app/controllers/application.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/app/css/style.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/bower.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/app/js/jquery-2.1.3.min.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/Brocfile.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/app/styles/app.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/app/templates/application.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/app/index.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/public/background.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/public/manifest.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/grades/app/templates/index.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/Soul/assets/grades.map",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/css/flickity.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_layouts/default.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_includes/head.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_includes/nav.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/js/flickity.pkgd.min.js",
+		"/D/Saved Downloads/Adobe Illustrator CC 2014 64 bit (crack) [ChingLiu]/ChingLiu.Install.Notes.nfo",
+		"/D/Saved Downloads/Adobe Photoshop CS6 13.0.1 Final  Multilanguage (cracked dll) [ChingLiu]/ChingLiu.Notes.nfo",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/js/init.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_data/photos.yml",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/photography.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/resume.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/projects.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_data/projects.yml",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/css/main.scss",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/index.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_includes/footer.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/CSC115/A4/Calc.java",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/css/photography.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_config.yml",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_layouts/post.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/sftp-config.json",
+		"/C/Users/jakerunzer/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/C/Users/jakerunzer/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/css/style.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_sass/_base.scss",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_site/css/main.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/_sass/_layout.scss",
+		"/C/Users/jakerunzer/AppData/Roaming/Sublime Text 3/Packages/User/JsFormat.sublime-settings",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/io.jakerunzer/js/materialize.min.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/myblog/_data",
+		"/C/Users/jakerunzer/Documents/Vagrant/VMS/just_linux/Vagrantfile",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/index.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/public/bower_components/jquery/src/core/parseHTML.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/views/home.handlebars",
+		"/C/Users/jakerunzer/AppData/Roaming/Sublime Text 3/Packages/User/HTMLBeautify.sublime-settings",
+		"/C/Users/jakerunzer/AppData/Roaming/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/node_modules/express-handlebars/node_modules/glob/test/pause-resume.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/public/bower_components/jquery/src/offset.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/package.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/sftp-config.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/.gitignore",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/.bowerrc",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/node_modules/express-handlebars/node_modules/handlebars/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/views/layouts/main.handlebars",
+		"/H/Documents/CompletedTorrents/Adobe Illustrator CC 2014 64 bit (crack) [ChingLiu]/ChingLiu.Install.Notes.nfo",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/views/projects.handlebars",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/views/about.handlebars",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/public/js/init.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/public/css/style.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/app.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/views/photography.handlebars",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/node_modules/express-handlebars/node_modules/handlebars/node_modules/uglify-js/node_modules/source-map/lib/source-map/array-set.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/public/bower_components/jquery/src/var/toString.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/public/bower_components/jquery/src/var/hasOwn.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/bower.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/js/init.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/css/materialize.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/js/materialize.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/views/popup.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/js/popup.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/js/content.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/js/jquery.js",
+		"/C/Users/jakerunzer/Downloads/popup.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/css/styles.css",
+		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/popup.js",
+		"/C/Users/jakerunzer/Downloads/popup.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/icon.png",
+		"/C/Users/jakerunzer/Downloads/Koken_Installer/Koken_Installer/koken/index.php",
+		"/H/Documents/MediaDownloadFiles/torrents_mini.csv/torrents_mini.csv",
+		"/C/Users/jakerunzer/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/jakerunzer/Dropbox/Programming/Node/plug_bot/sftp-config.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/Node/plug_bot/secrets.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Node/plug_bot/.gitignore",
+		"/C/Users/jakerunzer/AppData/Roaming/Sublime Text 3/Packages/User/Colorsublime.sublime-settings",
+		"/C/Users/jakerunzer/Dropbox/Programming/Node/plug_bot/file.txt",
+		"/C/Users/jakerunzer/Downloads/lab-material/lab-material/lab10/reader.cpp",
+		"/C/Users/jakerunzer/Downloads/lab-material/lab-material/lab10/hash_table.hpp",
+		"/C/Users/jakerunzer/Downloads/lab10/hash_table.hpp"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 92.0,
+		"where_history":
+		[
+			"*",
+			"*.js",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"red",
+			"form",
+			"z-depth",
+			"h3",
+			"Profile",
+			"profile",
+			"last_name",
+			"content",
+			"test",
+			"init",
+			"object",
+			"type",
+			"scripts",
+			"background",
+			"init",
+			"Overview",
+			"width",
+			"window",
+			"Index",
+			"materialize",
+			"forstudents",
+			"grades",
+			"flickity",
+			"main",
+			"flickity",
+			"jekyllrb",
+			" !important",
+			"photo-nav",
+			"initizialization",
+			"false",
+			"About",
+			"href",
+			"Projects",
+			"three",
+			"two",
+			"photography",
+			"components",
+			"Javascript",
+			"audioTracks",
+			"MediaStreamConstraint",
+			"audioConstraints",
+			"message",
+			"false",
+			"email",
+			"false",
+			"username",
+			"zsNojlVrltK0",
+			"AIzaSyAbQtg0H981_bk8xP_Y3L",
+			"video",
+			"md",
+			"markdown",
+			"false",
+			"path",
+			"example",
+			"password",
+			"username",
+			"swap_halves",
+			"decrypted_msg",
+			"msg",
+			"swap",
+			"msg",
+			"temporary",
+			"some_string",
+			"count",
+			"emit",
+			"search",
+			"floatingCirclesG",
+			"margin",
+			"percase",
+			"true",
+			"large",
+			"medium",
+			"label",
+			"default",
+			"y",
+			"section",
+			"now",
+			"info",
+			"music",
+			"data",
+			"home",
+			"homeController",
+			"queueController",
+			"Song",
+			"holder.js",
+			"artist",
+			"pintical",
+			"data",
+			"song",
+			"lastfm",
+			"artist",
+			"artistmatches",
+			"artist",
+			"router",
+			"trusty64",
+			"base",
+			"../components",
+			"../compon",
+			"css",
+			"null",
+			"world",
+			"RATE",
+			"numpy",
+			"power",
+			"chunk",
+			"int",
+			"size",
+			"ffty",
+			"ffty2",
+			"ffty1",
+			"numpy",
+			"status",
+			"frame_count",
+			"test",
+			"code",
+			"color",
+			"room",
+			"show",
+			"about",
+			"homeController",
+			"newmsgs",
+			"message",
+			"msg",
+			"error",
+			"success",
+			"error",
+			"conig",
+			"secretes"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"components",
+			"np",
+			"handleError",
+			"error_handler",
+			"DIVIDE",
+			"MULTIPLY",
+			"SUBTRACT",
+			"Quote",
+			"quote",
+			"Quote",
+			"quote"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/styles/app.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 785,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								317,
+								317
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "new.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 969,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 120.0
+	},
+	"output.sftp":
+	{
+		"height": 98.0
+	},
+	"pinned_build_system": "",
+	"project": "material-app.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"app.css",
+				"app\\styles\\app.css"
+			],
+			[
+				"rou",
+				"app\\router.js"
+			],
+			[
+				"new.hbs",
+				"app\\templates\\new.hbs"
+			],
+			[
+				"sft",
+				"sftp-config.json"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"inde",
+				"app\\index.html"
+			],
+			[
+				"back",
+				"public\\background.js"
+			],
+			[
+				"router",
+				"app\\router.js"
+			],
+			[
+				"over",
+				"app\\templates\\overview.hbs"
+			],
+			[
+				"pro",
+				"app\\templates\\profile.hbs"
+			],
+			[
+				"app",
+				"app\\templates\\application.hbs"
+			],
+			[
+				"ov",
+				"app\\templates\\overview.hbs"
+			],
+			[
+				"appl",
+				"app\\controllers\\application.js"
+			],
+			[
+				"auth",
+				"public\\auth.js"
+			],
+			[
+				"ind",
+				"app\\index.html"
+			],
+			[
+				"man",
+				"dist\\manifest.json"
+			],
+			[
+				"ini",
+				"dist\\assets\\init.js"
+			],
+			[
+				"borc",
+				"Brocfile.js"
+			],
+			[
+				"head",
+				"_includes\\head.html"
+			],
+			[
+				"def",
+				"_layouts\\default.html"
+			],
+			[
+				"pho",
+				"photography.html"
+			],
+			[
+				"st",
+				"public\\css\\style.css"
+			],
+			[
+				"main",
+				"views\\layouts\\main.handlebars"
+			],
+			[
+				"ph",
+				"views\\photography.handlebars"
+			],
+			[
+				"stcs",
+				"public\\css\\style.css"
+			],
+			[
+				"abou",
+				"views\\about.handlebars"
+			],
+			[
+				"scs",
+				"public\\css\\style.css"
+			],
+			[
+				"home",
+				"views\\home.handlebars"
+			],
+			[
+				"in",
+				"index.html"
+			],
+			[
+				"visjs",
+				"js\\visualizer.js"
+			],
+			[
+				"vis",
+				"js\\visualizer.js"
+			],
+			[
+				"pop",
+				"js\\popup.js"
+			],
+			[
+				"bjs",
+				"js\\background.js"
+			],
+			[
+				"backjs",
+				"js\\background.js"
+			],
+			[
+				"op",
+				"views\\popup.html"
+			],
+			[
+				"css",
+				"css\\styles.css"
+			],
+			[
+				"se",
+				"secrets.js"
+			],
+			[
+				"quthml",
+				"public\\views\\queue.html"
+			],
+			[
+				"corejs",
+				"public\\js\\core.js"
+			],
+			[
+				"quhtml",
+				"public\\views\\queue.html"
+			],
+			[
+				"sty",
+				"public\\css\\style.css"
+			],
+			[
+				"inhtml",
+				"public\\views\\index.html"
+			],
+			[
+				"qujs",
+				"public\\js\\controllers\\queue.js"
+			],
+			[
+				"quhtl",
+				"public\\views\\queue.html"
+			],
+			[
+				"las",
+				"app\\lastfm.js"
+			],
+			[
+				"homhtml",
+				"public\\views\\home.html"
+			],
+			[
+				"stcss",
+				"public\\css\\style.css"
+			],
+			[
+				"hom",
+				"public\\views\\home.html"
+			],
+			[
+				"hmo",
+				"node_modules\\winston\\node_modules\\request\\tests\\test-httpModule.js"
+			],
+			[
+				"homhml",
+				"public\\views\\home.html"
+			],
+			[
+				"homh",
+				"public\\views\\home.html"
+			],
+			[
+				"les",
+				"node_modules\\moment\\locale\\es.js"
+			],
+			[
+				"queujs",
+				"public\\js\\controllers\\queue.js"
+			],
+			[
+				"injs",
+				"app\\routes\\index.js"
+			],
+			[
+				"serjs",
+				"server.js"
+			],
+			[
+				"homjs",
+				"public\\js\\controllers\\home.js"
+			],
+			[
+				"apijs",
+				"app\\routes\\api.js"
+			],
+			[
+				"api",
+				"app\\routes\\index.js"
+			],
+			[
+				"hjs",
+				"public\\js\\controllers\\home.js"
+			],
+			[
+				"csssy",
+				"public\\css\\style.css"
+			],
+			[
+				"scss",
+				"public\\css\\style.css"
+			],
+			[
+				"you",
+				"app\\youtube.js"
+			],
+			[
+				"indhtml",
+				"public\\views\\index.html"
+			],
+			[
+				"homejs",
+				"public\\js\\controllers\\home.js"
+			],
+			[
+				"abouhtml",
+				"public\\views\\about.html"
+			],
+			[
+				"cor",
+				"public\\js\\core.js"
+			],
+			[
+				"pagjs",
+				"public\\js\\controllers\\page.js"
+			],
+			[
+				"homehtml",
+				"public\\views\\home.html"
+			],
+			[
+				"pagehtml",
+				"public\\views\\page.html"
+			],
+			[
+				"aboujs",
+				"public\\js\\controllers\\about.js"
+			],
+			[
+				"pageser",
+				"public\\js\\services\\pageservice.js"
+			],
+			[
+				"about",
+				"public\\js\\controllers\\about.js"
+			],
+			[
+				"abouth",
+				"public\\views\\about.html"
+			],
+			[
+				"aboutjs",
+				"public\\js\\controllers\\about.js"
+			],
+			[
+				"page",
+				"public\\js\\controllers\\page.js"
+			],
+			[
+				"sock",
+				"app\\sockets.js"
+			],
+			[
+				"ser",
+				"server.js"
+			],
+			[
+				"mes",
+				"app\\models\\message.js"
+			],
+			[
+				"page.",
+				"app\\models\\page.js"
+			],
+			[
+				"pas",
+				"app\\models\\password.js"
+			],
+			[
+				"crea",
+				"public\\js\\controllers\\createpage.js"
+			],
+			[
+				"all",
+				"public\\js\\controllers\\allpages.js"
+			],
+			[
+				"pages",
+				"app\\models\\page.js"
+			],
+			[
+				"create",
+				"public\\js\\controllers\\createpage.js"
+			],
+			[
+				"cre",
+				"public\\views\\createpage.html"
+			],
+			[
+				"core",
+				"public\\js\\core.js"
+			],
+			[
+				"route",
+				"app\\routes.js"
+			],
+			[
+				"con",
+				"public\\js\\controllers.js"
+			],
+			[
+				"pa",
+				"public\\views\\page.html"
+			],
+			[
+				"routes",
+				"app\\routes.js"
+			],
+			[
+				"tod",
+				"app\\models\\todo.js"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"or",
+				"organizer.py"
+			],
+			[
+				"",
+				"pong.kv"
+			],
+			[
+				"lls",
+				"A4\\LLStack.java"
+			],
+			[
+				"ll",
+				"Lecture\\linked_lists.txt"
+			],
+			[
+				"cus",
+				"static\\css\\custom.css"
+			],
+			[
+				"qu",
+				"quote.py"
+			],
+			[
+				"ut",
+				"util.py"
+			],
+			[
+				"b",
+				"templates\\about.html"
+			],
+			[
+				"js",
+				"static\\js\\index.js"
+			],
+			[
+				"inj",
+				"static\\js\\index.js"
+			],
+			[
+				"q",
+				"quote.py"
+			],
+			[
+				"quo",
+				"quote.py"
+			],
+			[
+				"ma",
+				"main.py"
+			],
+			[
+				"m",
+				"main.py"
+			],
+			[
+				"mjs",
+				"static\\js\\menu.js"
+			],
+			[
+				"cu",
+				"static\\css\\custom.css"
+			],
+			[
+				"base",
+				"templates\\base.html"
+			],
+			[
+				"c",
+				"static\\css\\custom.css"
+			],
+			[
+				"mi",
+				"main.py"
+			],
+			[
+				"bas",
+				"templates\\base.html"
+			],
+			[
+				"lo",
+				"templates\\location_errors.html"
+			],
+			[
+				"min",
+				"main.py"
+			],
+			[
+				"me",
+				"message.py"
+			],
+			[
+				"u",
+				"util.py"
+			],
+			[
+				"mp",
+				"main.py"
+			],
+			[
+				"mainp",
+				"main.py"
+			],
+			[
+				"mj",
+				"static\\js\\main.js"
+			],
+			[
+				"utjs",
+				"static\\js\\util.js"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"hm",
+				"templates\\messages.html"
+			],
+			[
+				"pr",
+				"templates\\projects.html"
+			],
+			[
+				"proj",
+				"templates\\projects.html"
+			],
+			[
+				"ignore",
+				".gitignore"
+			],
+			[
+				"mai",
+				"mails.py"
+			],
+			[
+				"meass",
+				"status_messages.py"
+			],
+			[
+				"mian",
+				"main.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 274.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

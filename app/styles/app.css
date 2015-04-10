@@ -1,5 +1,6 @@
 #nav {
-    height: 120px;
+    height: 160px;
+    background-color: #01B0F0;
 }
 
 #content {
@@ -9,6 +10,10 @@
 
 #slide-out {
     overflow-y: auto;
+}
+
+#create-button:active {
+  background-color: #D5D5D5;
 }
 
 #nav-buttons {
@@ -23,18 +28,29 @@
     color: grey;
 
 }
-
-#add-link {
-
-}
-
 #profile-link {
     padding-top: 1.8em;
 }
 #new-header {
-  /*background-color: red;*/
+  background-color: #65B4B0;
   height: 120px;
   margin-top: 1em;
+}
+#new-input {
+  margin-top: 5.7em;
+  background-color: white;
+  padding-right: 3em;
+  padding-left: 3em;
+}
+#new-link {
+  text-decoration: none;
+  color: black;
+}
+#new-submit {
+  padding: 1.5em;
+}
+#create-box {
+  margin-top: 2em;
 }
 .link-main {
     font-weight: 600;

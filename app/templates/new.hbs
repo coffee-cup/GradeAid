@@ -1,11 +1,31 @@
 <div class="row">
-    <div id="new-header" class="col s12 z-depth-2">
-        <form class="row">
-            <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
+    <a {{action 'changeColour'}} href="">
+        <div id="new-header" class="col s12 z-depth-1">
+            <div class="row">
+                <div id="new-input" class="col s12 m8 offset-m2 z-depth-1">
+                    <div class="input-field">
+                        {{input id="class_name" value=class_name class="validate" type="text"}}
+                        <!-- <input id="class_name" type="text" class="validate"> -->
+                        <label for="class_name">Class Name</label>
+                    </div>
+                </div>
             </div>
-        </form>
+        </div>
+    </a>
+</div>
+
+<div class="row">
+
+    <div id="create-box" class="col s12 m8 offset-m2 center-align">
+        <div class="row">
+            <a {{action 'newClass'}} id="new-link" href="">
+                <div id="create-button" class="col s12 z-depth-2">
+                    <div id="new-submit" class="col s12 m8 offset-m2 center-align">
+                        <h4>Create</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
 

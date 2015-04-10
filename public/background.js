@@ -55,3 +55,11 @@ function loadWindow() {
     outerBounds: b
   });
 }
+
+chrome.runtime.onMessage.addListener(function(request, send, sendResponse) {
+  console.log('here');
+
+  if (request.message == 'get_schedule') {
+    sendResponse({schedule: schedule});
+  }
+});
