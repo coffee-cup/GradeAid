@@ -2,31 +2,27 @@
     height: 160px;
     background-color: #01B0F0;
 }
-
 #content {
     padding-left: 2em;
     padding-right: 2em;
 }
-
 #slide-out {
     overflow-y: auto;
 }
-
 #create-button:active {
   background-color: #D5D5D5;
 }
-
 #nav-buttons {
     margin-top: 0.5em;
 }
-
 #profile-icon {
     color: grey;
 }
-
+#profile-title {
+  margin-top: -1em;
+}
 #add-icon {
     color: grey;
-
 }
 #profile-link {
     padding-top: 1.8em;
@@ -54,6 +50,7 @@
 }
 .link-main {
     font-weight: 600;
+    margin-top: -1em;
 }
 
 header, #main, footer {

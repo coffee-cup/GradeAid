@@ -61,7 +61,7 @@ chrome.runtime.onMessage.addListener(function(request, send, sendResponse) {
     sendResponse({schedule: schedule});
   }
 
-  if (request.message == 'new_class') {
+  if (request.status == 'update') {
     schedule = request.schedule;
     saveSchedule();
   }

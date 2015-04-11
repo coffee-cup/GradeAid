@@ -7,14 +7,14 @@
         {{#link-to 'about' id="profile-link"}}
             <li id="profile-icon" class="fa fa-smile-o fa-4x">
             </li>
-                <p>About</p>
+                <p id="profile-title">About</p>
         {{/link-to}}
         </li>
         <li class="link-main">{{#link-to 'overview' class="link-main"}}Overview{{/link-to}}</li>
 
         {{#each class in model.classes}}
             <li {{bind-attr style=class.border}}>
-                {{#link-to 'index'}} {{class.title}} - {{class.grade}} {{/link-to}}
+                {{#link-to 'class' class.id}} {{class.title}} - {{class.grade}} {{/link-to}}
             </li>
         {{/each}}
 
