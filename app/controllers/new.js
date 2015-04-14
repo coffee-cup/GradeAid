@@ -1,6 +1,16 @@
 import Ember from 'ember';
 
+var scope = {
+  this: null,
+  class: null
+};
+
 export default Ember.Controller.extend({
+
+  init: function() {
+    this._super();
+    scope.this = this;
+  },
 
   backgroundColour: function() {
     return 'background-color: ' + this.get('colour');
@@ -18,7 +28,10 @@ export default Ember.Controller.extend({
         console.log(newClass);
         schedule.classes.push(newClass);
 
+        scope.class = newClass;
+
         chrome.runtime.sendMessage({type: "update", message: 'new_class', schedule: schedule});
+        scope.this.transitionToRoute('class', scope.class.id);
       } else {
         console.log('need to provide class name');
       }
@@ -30,48 +43,4 @@ export default Ember.Controller.extend({
       // $('#new-header').css('background-color', newColour);
     }
   }
-
 });
-
-// Math, Stats
-function createClass(name, colour) {
-  return {
-    id: "id",
-    name: name,
-    colour: colour,
-    grade: 0,
-    components: [
-      createComponent("Assignments", ["Assignment 1", "Assignment 2", "Assignment 3", "Assignment 4"]),
-      createComponent("Midterms", ["Midterm 1", "Midterm 2"]),
-      createComponent("Lab", ["Lab 1", "Lab 2", "Lab 3", "Lab 4"]),
-      createComponent("Final", "Final")
-    ]
-  }
-}
-
-// Exams, Assignments, Labs
-function createComponent(title, component_titles) {
-
-  var marks = [];
-  component_titles.foreach(function(element, index, array) {
-    marks.push(createMark(element));
-  });
-
-  return {
-    id: "id",
-    title: title,
-    grade: 0,
-    marks: marks
-  }
-}
-
-// Midterm 1, Lab 1, Assignment 1
-function createMark(title) {
-  return {
-    id: "id",
-    title: title,
-    grade: 0,
-    weight: 0,
-    due: null, // this is a date, null when not set
-  }
-}

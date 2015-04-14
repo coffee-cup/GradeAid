@@ -1,20 +1,35 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	class: function() {
-		var model = this.get('model');
-		var class_id = this.get('class_id');
+	// return background colour in css based on the clases colour
+	backgroundColour: function() {
+		var c = this.get('class');
+		if (c)
+      {		return 'background-color: ' + c.colour;
+  }
+  return 'background-color: ' + 'white';
+}.property('class'),
 
-		if (!model || !class_id) {
-			return null;
-		}
+ls: [1,2,3],
 
-		for (var i=0; i<model.classes.length; i++) {
-			if (model.classes[i].id === this.get('class_id')) {
-				return model.classes[i];
-			}
-		}
-		return null;
-	}.property('model', 'class_id')
+actions: {
+
+  addMark: function() {
+    var mark_title = this.get('mark_title');
+
+    if (mark_title) {
+      var schedule = this.get('model');
+
+      var mark = createMark(mark_title);
+      var c = this.get('class');
+
+      c.marks.pushObject(mark);
+      this.set('class', c);
+
+      chrome.runtime.sendMessage({type: 'update', message: 'new_mark', class_id: c.id, schedule: schedule});
+    }
+  }
+  
+}
 });
 
