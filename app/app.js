@@ -13,4 +13,20 @@ var App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
+Ember.Handlebars.helper('computedGrade', function(grade, total, options) {
+  grade = parseFloat(grade);
+  total = parseInt(total);
+
+  if (grade && total) {
+    var cg = (grade / total) * 100;
+
+    if (cg < 0) {
+      return "null";
+    }
+
+    return cg.toFixed(1);
+  }
+  return "null";
+});
+
 export default App;

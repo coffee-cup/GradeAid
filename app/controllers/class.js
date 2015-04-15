@@ -10,7 +10,73 @@ export default Ember.Controller.extend({
   return 'background-color: ' + 'white';
 }.property('class'),
 
-ls: [1,2,3],
+active_id: '9ye5mh57r',
+
+changeActive: function() {
+  var active_id = this.get('active_id');
+
+  if (active_id) {
+
+  }
+}.observes('active_id').on('init'),
+
+markChanged: function() {
+  var grade = parseFloat(this.get('mark_grade'));
+  var weight = parseInt(this.get('mark_weight'));
+  var total = parseInt(this.get('mark_total'));
+
+  var mark = this.get('active_mark');
+
+  if (mark && grade && weight) {
+    if (total) {
+      grade = (grade / total) * 100;
+    }
+
+    // mark.set('grade', grade);
+    // mark.set('weight', weight);
+    console.log(mark);
+
+    // mark.grade = grade;
+    // mark.weight = weight;
+  }
+}.observes('mark_grade', 'mark_weight', 'mark_total'),
+
+gradeChanged: function() {
+  var schedule = this.get('model');
+  var c = this.get('class');
+
+  var total_grade = 0;
+  for (var i=0;i<c.marks.length;i++) {
+    var m = c.marks[i];
+
+    var grade = parseFloat(m.grade);
+    var total = parseInt(m.total);
+    var weight = parseInt(m.weight);
+
+    if (!grade || !total || !weight) {
+      continue;
+    }
+
+    var percent = (grade / total);
+
+    if (!percent || percent < 0) {
+      continue;
+    }
+
+    var relative_grade = percent * weight;
+    total_grade += relative_grade;
+  }
+
+  total_grade = total_grade.toFixed(1);
+  if (total_grade > 100) {
+    total_grade = 100;
+  }
+
+  // c.grade = total_grade;
+  this.set('class.grade', total_grade);
+
+  chrome.runtime.sendMessage({type: "update", message: 'grade_update', schedule: schedule});
+}.observes('class.marks.@each.grade', 'class.marks.@each.weight', 'class.marks.@each.total'),
 
 actions: {
 
@@ -28,8 +94,19 @@ actions: {
 
       chrome.runtime.sendMessage({type: 'update', message: 'new_mark', class_id: c.id, schedule: schedule});
     }
+  },
+
+  activeChanged: function(active_id) {
+    var c = this.get('class');
+    for (var i=0;i<c.marks.length;i++) {
+      var m = c.marks[i];
+      if (m.id === active_id) {
+        this.set('active_mark', m);
+        break;
+      }
+    }
   }
-  
+
 }
 });
 

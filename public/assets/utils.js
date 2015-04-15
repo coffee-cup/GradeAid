@@ -26,6 +26,7 @@ function createMark(title) {
     id: ID(),
     title: title,
     grade: -1,
+    total: 100,
     weight: 0,
     due: null, // this is a date, null when not set
   };

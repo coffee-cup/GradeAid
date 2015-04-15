@@ -20,7 +20,7 @@ export default Ember.Controller.extend({
 		scope.this = this;
 
 		chrome.runtime.onMessage.addListener(function(request, send, sendResponse) {
-			if (request.message === 'new_class') {
+			if (request.type === 'update') {
 				scope.this.set('model', request.schedule);
 			}
 		});
