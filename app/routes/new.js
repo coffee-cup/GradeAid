@@ -10,11 +10,10 @@ export default Ember.Route.extend({
 
 		var newColour = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
     this.controllerFor('new').set('colour', newColour);
+    this.controllerFor('new').set('class_name', '');
 
-    chrome.runtime.sendMessage({message: 'get_schedule'}, function(response) {
-    	var model = response.schedule;
-      scope.this.controllerFor('new').set('model', model);
-      scope.this.controllerFor('new').set('class_name', '');
+    getSchedule(function(schedule) {
+      scope.this.controllerFor('new').set('model', schedule);
     });
   }
 });

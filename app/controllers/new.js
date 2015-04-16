@@ -23,15 +23,19 @@ export default Ember.Controller.extend({
 
       if (class_name && colour) {
         var schedule = this.get('model');
-
+        console.log(schedule);
         var newClass = createClass(class_name, colour);
         console.log(newClass);
         schedule.classes.push(newClass);
 
         scope.class = newClass;
 
-        chrome.runtime.sendMessage({type: "update", message: 'new_class', schedule: schedule});
-        scope.this.transitionToRoute('class', scope.class.id);
+
+        saveSchedule(schedule, function() {
+          scope.this.transitionToRoute('class', scope.class.id);
+        });
+
+        // chrome.runtime.sendMessage({type: "update", message: 'new_class', schedule: schedule});
       } else {
         console.log('need to provide class name');
       }

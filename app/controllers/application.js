@@ -15,15 +15,21 @@ export default Ember.Controller.extend({
     }
   }.observes('model'),
 
-	init: function() {
-		this._super();
-		scope.this = this;
+  init: function() {
+    this._super();
+    scope.this = this;
 
-		chrome.runtime.onMessage.addListener(function(request, send, sendResponse) {
-			if (request.type === 'update') {
-				scope.this.set('model', request.schedule);
-			}
-		});
-	}
+    chrome.storage.onChanged.addListener(function() {
+      getSchedule(function(schedule) {
+        scope.this.set('model', schedule);
+      });
+    });
+
+		// chrome.runtime.onMessage.addListener(function(request, send, sendResponse) {
+		// 	if (request.type === 'update') {
+		// 		scope.this.set('model', request.schedule);
+		// 	}
+		// });
+}
 });
 

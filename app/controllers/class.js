@@ -1,6 +1,38 @@
 import Ember from 'ember';
 
+var scope = {
+  this: null
+};
+
+
 export default Ember.Controller.extend({
+
+  init: function() {
+    this._super();
+    scope.this = this;
+
+    chrome.storage.onChanged.addListener(function() {
+      // do not actually need to listen for changes because this page
+      // is the only place you can change these settings
+
+      return;
+      var class_id = scope.this.get('class_id');
+
+      getSchedule(function(schedule) {
+        scope.this.set('model', schedule);
+
+        var c = null;
+        for (var i=0; i<schedule.classes.length; i++) {
+          if (schedule.classes[i].id === class_id) {
+            c = schedule.classes[i];
+          }
+        }
+
+        scope.this.set('class', c);
+      });
+    });
+  },
+
 	// return background colour in css based on the clases colour
 	backgroundColour: function() {
 		var c = this.get('class');
@@ -46,16 +78,19 @@ gradeChanged: function() {
   var c = this.get('class');
 
   var total_grade = 0;
+  var total_weight = 0;
   for (var i=0;i<c.marks.length;i++) {
     var m = c.marks[i];
 
     var grade = parseFloat(m.grade);
     var total = parseInt(m.total);
-    var weight = parseInt(m.weight);
+    var weight = parseFloat(m.weight);
 
     if (!grade || !total || !weight) {
       continue;
     }
+
+    total_weight += weight;
 
     var percent = (grade / total);
 
@@ -67,6 +102,12 @@ gradeChanged: function() {
     total_grade += relative_grade;
   }
 
+  if (total_weight != 100) {
+    this.set('error', 'Weights do not sum to 100');
+  } else {
+    this.set('error', '');
+  }
+
   total_grade = total_grade.toFixed(1);
   if (total_grade > 100) {
     total_grade = 100;
@@ -75,7 +116,7 @@ gradeChanged: function() {
   // c.grade = total_grade;
   this.set('class.grade', total_grade);
 
-  chrome.runtime.sendMessage({type: "update", message: 'grade_update', schedule: schedule});
+  saveSchedule(schedule);
 }.observes('class.marks.@each.grade', 'class.marks.@each.weight', 'class.marks.@each.total'),
 
 actions: {
@@ -92,7 +133,7 @@ actions: {
       c.marks.pushObject(mark);
       this.set('class', c);
 
-      chrome.runtime.sendMessage({type: 'update', message: 'new_mark', class_id: c.id, schedule: schedule});
+      saveSchedule(schedule);
     }
   },
 

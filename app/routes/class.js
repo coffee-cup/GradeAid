@@ -9,14 +9,14 @@ export default Ember.Route.extend({
     scope.this = this;
     this.controllerFor('class').set('class_id', params.class_id);
     this.controllerFor('class').set('mark_title', '');
-    chrome.runtime.sendMessage({message: 'get_schedule'}, function(response) {
-    	var model = response.schedule;
-      scope.this.controllerFor('class').set('model', model);
+
+    getSchedule(function(schedule) {
+      scope.this.controllerFor('class').set('model', schedule);
 
       var c = null;
-      for (var i=0; i<model.classes.length; i++) {
-        if (model.classes[i].id === params.class_id) {
-          c = model.classes[i];
+      for (var i=0; i<schedule.classes.length; i++) {
+        if (schedule.classes[i].id === params.class_id) {
+          c = schedule.classes[i];
         }
       }
 
