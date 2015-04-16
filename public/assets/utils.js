@@ -32,7 +32,7 @@ function newSchedule() {
 
 function saveSchedule(schedule, callback) {
   var json = JSON.stringify(schedule);
-  console.log('saving ' + json);
+  // console.log('saving ' + json);
   chrome.storage.sync.set({"schedule_key": schedule}, function() {
     if (chrome.runtime.lastError) {
       console.log(chrome.runtime.lastError.message);
@@ -56,7 +56,7 @@ function createClass(name, colour) {
     id: ID(),
     name: name,
     colour: colour,
-    grade: -1,
+    grade: 0,
     marks: []
   };
 }
@@ -68,7 +68,7 @@ function createMark(title) {
   return {
     id: ID(),
     title: title,
-    grade: -1,
+    grade: 0,
     total: 100,
     weight: 0,
     due: null, // this is a date, null when not set

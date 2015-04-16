@@ -65,8 +65,17 @@ gradeChanged: function() {
     var total = parseInt(m.total);
     var weight = parseFloat(m.weight);
 
-    if (!grade || !total || !weight) {
-      continue;
+
+    if (!grade) {
+      grade = 0;
+    }
+
+    if (!total) {
+      total = 0;
+    }
+
+    if (!weight) {
+      weight = 0;
     }
 
     total_weight += weight;
@@ -99,6 +108,17 @@ gradeChanged: function() {
 }.observes('class.marks.@each.grade', 'class.marks.@each.weight', 'class.marks.@each.total'),
 
 actions: {
+
+  deleteMark: function(mark_id) {
+    var mark = this.get('active_mark');
+    var c = this.get('class');
+    c.marks.removeObject(mark);
+
+    var schedule = this.get('model');
+    if (schedule) {
+      saveSchedule(schedule);
+    }
+  },
 
   addMark: function() {
     var mark_title = this.get('mark_title');

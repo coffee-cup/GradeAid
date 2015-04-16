@@ -17,16 +17,21 @@ Ember.Handlebars.helper('computedGrade', function(grade, total, options) {
   grade = parseFloat(grade);
   total = parseInt(total);
 
-  if (grade && total) {
-    var cg = (grade / total) * 100;
-
-    if (cg < 0) {
-      return "null";
-    }
-
-    return cg.toFixed(1);
+  if (!grade) {
+    grade = 0;
   }
-  return "null";
+
+  if (!total) {
+    total = 0;
+  }
+
+  var cg = (grade / total) * 100;
+
+  if (cg < 0) {
+    return 0;
+  }
+
+  return cg.toFixed(1);
 });
 
 // if (!chrome.extenstion.sendMessage) {
