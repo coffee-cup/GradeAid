@@ -10,27 +10,6 @@ export default Ember.Controller.extend({
   init: function() {
     this._super();
     scope.this = this;
-
-    chrome.storage.onChanged.addListener(function() {
-      // do not actually need to listen for changes because this page
-      // is the only place you can change these settings
-
-      return;
-      var class_id = scope.this.get('class_id');
-
-      getSchedule(function(schedule) {
-        scope.this.set('model', schedule);
-
-        var c = null;
-        for (var i=0; i<schedule.classes.length; i++) {
-          if (schedule.classes[i].id === class_id) {
-            c = schedule.classes[i];
-          }
-        }
-
-        scope.this.set('class', c);
-      });
-    });
   },
 
 	// return background colour in css based on the clases colour

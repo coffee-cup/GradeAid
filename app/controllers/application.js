@@ -6,6 +6,17 @@ var scope = {
 
 export default Ember.Controller.extend({
 
+  init: function() {
+    this._super();
+    scope.this = this;
+
+    notifier.addListener(function() {
+      getSchedule(function(schedule) {
+        scope.this.set('model', schedule);
+      });
+    });
+  },
+
   modelChanged: function() {
     var schedule = this.get('model');
     if (schedule) {
@@ -15,21 +26,10 @@ export default Ember.Controller.extend({
     }
   }.observes('model'),
 
-  init: function() {
-    this._super();
-    scope.this = this;
-
-    chrome.storage.onChanged.addListener(function() {
-      getSchedule(function(schedule) {
-        scope.this.set('model', schedule);
-      });
-    });
-
 		// chrome.runtime.onMessage.addListener(function(request, send, sendResponse) {
 		// 	if (request.type === 'update') {
 		// 		scope.this.set('model', request.schedule);
 		// 	}
 		// });
-}
 });
 
