@@ -5,6 +5,49 @@ var ID = function () {
   return Math.random().toString(36).substr(2, 9);
 };
 
+function getSchedule(callback) {
+  var schedule = null;
+  chrome.storage.sync.get("schedule_key", function(data) {
+    if (data.schedule_key) {
+      console.log("found schedule");
+      schedule = data.schedule_key;
+      console.log(schedule);
+      callback(schedule);
+    } else {
+      schedule = newSchedule();
+      saveSchedule(schedule);
+      callback(schedule);
+    }
+  });
+}
+
+function newSchedule() {
+  console.log('created new schedule');
+  return {
+    id: ID(),
+    title: "Schedule 1",
+    classes: []
+  }
+}
+
+function saveSchedule(schedule, callback) {
+  var json = JSON.stringify(schedule);
+  console.log('saving ' + json);
+  chrome.storage.sync.set({"schedule_key": schedule}, function() {
+    if (chrome.runtime.lastError) {
+      console.log(chrome.runtime.lastError.message);
+      return;
+    }
+
+    console.log('saved schedule');
+    notifier.sendNotification();
+    if (callback) {
+      callback();
+    }
+  });
+}
+
+
 // Math, Stats
 function createClass(name, colour) {
   // console.log('creating class: ' + name + ': ' + colour);
