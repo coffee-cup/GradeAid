@@ -24,7 +24,7 @@
 
             {{#each mark in class.marks}}
 
-            <li {{bind-attr id=mark.id}} class="mark-header">
+            <li class="mark-list-item mark-header">
                 <div {{action 'activeChanged' mark.id}} class="collapsible-header mark-cheader">
                     <div class="row">
                         <div id="mark-title" class="col s9">
@@ -37,6 +37,13 @@
                 </div>
 
                 <div class="collapsible-body">
+
+                    <div {{bind-attr id=mark.id}} class="class-need row">
+                        <div class="col s12">
+                            <p>Test</p>
+                        </div>
+                    </div>
+
                     <div class="row">
 
                         <div id="mark-input" class="input-field col s3">
@@ -62,7 +69,6 @@
                             <div {{action 'deleteMark' mark.id}} id="mark-icon-down" class="click-area col s12 center-align">
                                 <i class="fa fa-trash-o"></i>
                             </div>
-
                         </div>
                     </div>
 

@@ -34,10 +34,4 @@ Ember.Handlebars.helper('computedGrade', function(grade, total, options) {
   return cg.toFixed(1);
 });
 
-// if (!chrome.extenstion.sendMessage) {
-//   console.log('NOT DEFINED');
-// } else {
-//   console.log('IT IS DEFINED!');
-// }
-
 export default App;

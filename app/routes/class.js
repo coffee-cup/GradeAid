@@ -10,6 +10,11 @@ export default Ember.Route.extend({
     this.controllerFor('class').set('class_id', params.class_id);
     this.controllerFor('class').set('mark_title', '');
 
+    // set these to null so if previous class loaded
+    // it does not flash on screen
+    this.controllerFor('class').set('model', null);
+    this.controllerFor('class').set('class', null);
+
     getSchedule(function(schedule) {
       scope.this.controllerFor('class').set('model', schedule);
 

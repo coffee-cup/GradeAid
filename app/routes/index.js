@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   beforeModel: function() {
-    this.transitionTo('overview');
+    this.transitionTo('class', 'sidzeu0yl');
   }
 });
 

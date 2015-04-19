@@ -5,6 +5,12 @@ var ID = function () {
   return Math.random().toString(36).substr(2, 9);
 };
 
+function calculateNextNeeds(c, callback) {
+  for (var i=0;i<c.marks.length;i++) {
+
+  }
+}
+
 function getSchedule(callback) {
   var schedule = null;
   chrome.storage.sync.get("schedule_key", function(data) {
@@ -70,7 +76,9 @@ function createMark(title) {
     title: title,
     grade: 0,
     total: 100,
+    total_grade: 0,
     weight: 0,
+    needed: [],
     due: null, // this is a date, null when not set
   };
 }
