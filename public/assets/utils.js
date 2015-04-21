@@ -5,19 +5,40 @@ var ID = function () {
   return Math.random().toString(36).substr(2, 9);
 };
 
-function calculateNextNeeds(c, callback) {
-  for (var i=0;i<c.marks.length;i++) {
 
+function calculateNeeded(mark, total_grade, total_weight) {
+  if (!mark.weight) {
+    return [];
   }
+
+  var current_weight = total_weight - mark.weight;
+  var current_grade = total_grade;
+
+  console.log('current: ' + current_grade);
+  console.log('curr_weight: ' + current_weight);
+  console.log('weight: ' + mark.weight);
+
+  return [
+    neededFor(mark.weight, total_grade, 50),
+    neededFor(mark.weight, total_grade, 60),
+    neededFor(mark.weight, total_grade, 70),
+    neededFor(mark.weight, total_grade, 80),
+    neededFor(mark.weight, total_grade, 90),
+    neededFor(mark.weight, total_grade, 100)
+  ];
+}
+
+function neededFor(weight, current_grade, current_weight, wanted) {
+  return (wanted - (current_weight * current_grade)) / weight;
 }
 
 function getSchedule(callback) {
   var schedule = null;
   chrome.storage.sync.get("schedule_key", function(data) {
     if (data.schedule_key) {
-      console.log("found schedule");
+      // console.log("found schedule");
       schedule = data.schedule_key;
-      console.log(schedule);
+      // console.log(schedule);
       callback(schedule);
     } else {
       schedule = newSchedule();
@@ -45,7 +66,7 @@ function saveSchedule(schedule, callback) {
       return;
     }
 
-    console.log('saved schedule');
+    // console.log('saved schedule');
     notifier.sendNotification();
     if (callback) {
       callback();

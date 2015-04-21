@@ -21,6 +21,25 @@ export default Ember.Controller.extend({
     return 'background-color: ' + 'white';
   }.property('class'),
 
+  // sets all the needed sections max-heights
+  setMaxHeights: function() {
+    var c = this.get('class');
+    if (c) {
+
+      Ember.run.scheduleOnce('afterRender', this, function(){
+        for (var i=0;i<c.marks.length;i++) {
+          var m = c.marks[i];
+          if (m.weight && m.weight > 0 && (!m.grade || m.grade == 0)) {
+            Ember.$('#' + m.id).css('max-height', '100px');
+          } else {
+            Ember.$('#' + m.id).css('max-height', '0');
+          }
+        }
+      });
+
+    }
+  }.observes('class'),
+
   active_id: '9ye5mh57r',
 
   changeActive: function() {
@@ -79,9 +98,11 @@ export default Ember.Controller.extend({
 
     // if the total grade is valid, calculate what is neeed to get 50-90%
     if (active_mark) {
-      if (active_mark.weight && active_mark.weight > 0) {
+      if (active_mark.weight && active_mark.weight > 0 && (!active_mark.grade || active_mark.grade == 0)) {
         var needed = active_mark.needed;
-        needed.pushObject('2');
+        var needs = calculateNeeded(active_mark, total_grade, total_weight);
+        console.log(needs);
+        this.set('active_mark.needed', needs);
         Ember.$('#' + active_mark.id).css('max-height', '100px');
       } else {
         this.set('active_mark.needed', []);
@@ -130,13 +151,6 @@ export default Ember.Controller.extend({
         var m = c.marks[i];
         if (m.id === active_id) {
           this.set('active_mark', m);
-
-          if (m.weight && m.weight > 0) {
-            Ember.$('#' + m.id).css('max-height', '100px');
-          } else {
-            Ember.$('#' + m.id).css('max-height', '0');
-          }
-
           break;
         }
       }
