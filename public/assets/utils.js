@@ -52,7 +52,8 @@ function newSchedule() {
   return {
     id: ID(),
     title: "Schedule 1",
-    classes: []
+    classes: [],
+    last_class: null
   }
 }
 

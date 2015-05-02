@@ -137,7 +137,23 @@ export default Ember.Controller.extend({
   actions: {
 
     deleteClass: function(class_id) {
-      console.log('will delete class ' + class_id);
+      var c = this.get('class');
+      var schedule = this.get('model');
+
+      if (c && schedule) {
+        schedule.classes.removeObject(c);
+
+        if (schedule.classes[0]) {
+          schedule.last_class = schedule.classes[0].id;
+        } else {
+          schedule.last_class = null;
+        }
+
+        saveSchedule(schedule, function() {
+          scope.this.transitionToRoute('index');
+        });
+        // saveSchedule(schedule);
+      }
     },
 
     deleteMark: function(mark_id) {
