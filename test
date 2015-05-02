@@ -1,13 +1,5 @@
 <nav id="nav">
 
-    <div class="nav-wrapper">
-        <a id="name-header" href="#" class="brand-logo">
-            <span class="name-grade">Grade</span><span class="name-aid">Aid</span>
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-        </ul>
-    </div>
-
    <ul id="slide-out" class="side-nav fixed">
     <div class="nav-container">
         <li class="center-align">
@@ -51,9 +43,3 @@
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 </nav>
-
-
-
-<div id="main">
-    {{outlet}}
-</div>

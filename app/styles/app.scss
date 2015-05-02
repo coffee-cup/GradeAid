@@ -9,7 +9,7 @@ html {
   overflow: hidden;
 }
 #nav {
-  height: 160px;
+  height: 172px;
   background-color: $nav_color;
 }
 #content {
@@ -109,7 +109,7 @@ html {
 }
 #mark-icon-down {
   color: gray;
-  margin-left: 1.5em;
+  margin-left: 1.2em;
 }
 #mark-input-container {
   margin-bottom: 0;
@@ -147,6 +147,27 @@ html {
     font-weight: 200;
   }
 }
+nav {
+  .name-grade {
+    font-weight: 500;
+  }
+  .name-aid {
+    font-weight: 100;
+  }
+
+  #name-header {
+    font-size: 7em;
+    margin-top: 50px;
+    margin-left: 0.5em;
+  }
+
+  @media only screen and (max-width : 992px) {
+    #name-header {
+      margin-left: 0;
+      padding-bottom: 0.2em;
+    }
+  }
+}
 .mark-header {
   font-size: 2em;
 }
@@ -181,8 +202,16 @@ header, #main, footer {
   margin-left: 240px;
 }
 
+.nav-wrapper {
+  margin-left: 240px;
+}
+
 @media only screen and (max-width : 992px) {
   header, #main, footer {
+    margin-left: 0;
+  }
+
+  .nav-wrapper {
     margin-left: 0;
   }
 }
