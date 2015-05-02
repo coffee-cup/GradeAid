@@ -16,7 +16,7 @@ loadInitializers(App, config.modulePrefix);
 Ember.Handlebars.helper('computedGrade', function(grade, total, options) {
   grade = parseFloat(grade);
   total = parseInt(total);
-
+  
   if (!grade) {
     grade = 0;
   }
@@ -33,5 +33,10 @@ Ember.Handlebars.helper('computedGrade', function(grade, total, options) {
 
   return cg.toFixed(1);
 });
+
+Ember.NavComponent = Ember.Component.extend({
+  template: 'components/nav'
+});
+
 
 export default App;

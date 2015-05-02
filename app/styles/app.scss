@@ -1,5 +1,5 @@
-@nav_color: #FF7E0A;
-@sub_color: #EE3633;
+$nav_color: #FF7E0A;
+$sub_color: #EE3633;
 
 html {
   overflow: auto;
@@ -9,39 +9,39 @@ html {
   overflow: hidden;
 }
 #nav {
-    height: 160px;
-    background-color: @nav_color;
+  height: 160px;
+  background-color: $nav_color;
 }
 #content {
-    padding-left: 2em;
-    padding-right: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 #slide-out {
-    overflow-y: auto;
+  overflow-y: auto;
 }
 #create-button:active {
   background-color: #D5D5D5;
 }
 #nav-buttons {
-    margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 #class-side-row {
   margin-bottom: 0px;
 }
 #profile-icon {
-    color: grey;
+  color: grey;
 }
 #profile-title {
   margin-top: -1em;
 }
 #add-icon {
-    color: grey;
+  color: grey;
 }
 #add-class-title {
   margin-top: -1.5em;
 }
 #profile-link {
-    padding-top: 1.8em;
+  padding-top: 1.8em;
 }
 #new-header {
   /*background-color: #65B4B0;*/
@@ -96,20 +96,48 @@ html {
   margin-top: 1.4em;
 }
 #mark-icons {
-  padding-top: 1em;
+  padding-top: 0.5em;
+  // padding-left: 3em;
 }
-.class-need {
-  margin-bottom: 0 !important;
-
-  max-height: 100px;
-  overflow: hidden;
-
-  -webkit-transition: max-height 1.0s;
-  -moz-transition: max-height 1.0s;
-  transition: max-height 1.0s;
+#mark-icon-down {
+  color: gray;
+  margin-left: 1em;
 }
-.class-need p {
-  padding: 0 !important;
+#mark-input-container {
+  margin-bottom: 0;
+}
+#need-container {
+  font-size: 0.8em;
+
+  div {
+    border-right: solid 1px gray;
+  }
+
+  div:last-child {
+    border-right: none;
+  }
+
+  p {
+    padding: 0;
+  }
+
+  .need-final {
+    font-weight: 400;
+    margin-bottom: 1em;
+  }
+
+  #need-final-input {
+    margin-top: -0.7em;
+    margin-bottom: -0.2em;
+
+    input {
+      font-size: 1em;
+    }
+  }
+
+  .need-grade {
+    font-weight: 200;
+  }
 }
 .mark-header {
   font-size: 2em;
@@ -127,8 +155,8 @@ html {
   font-weight: 300;
 }
 .link-main {
-    font-weight: 600;
-    margin-top: -1em;
+  font-weight: 600;
+  margin-top: -1em;
 }
 .small-insets {
   padding-left: 0.5em;
@@ -142,11 +170,11 @@ html {
 }
 
 header, #main, footer {
-    margin-left: 240px;
-  }
+  margin-left: 240px;
+}
 
-  @media only screen and (max-width : 992px) {
-    header, #main, footer {
-      margin-left: 0;
-    }
+@media only screen and (max-width : 992px) {
+  header, #main, footer {
+    margin-left: 0;
   }
+}

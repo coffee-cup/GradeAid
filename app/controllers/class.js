@@ -101,7 +101,7 @@ export default Ember.Controller.extend({
       if (active_mark.weight && active_mark.weight > 0 && (!active_mark.grade || active_mark.grade == 0)) {
         var needed = active_mark.needed;
         var needs = calculateNeeded(active_mark, total_grade, total_weight);
-        console.log(needs);
+        // console.log(needs);
         this.set('active_mark.needed', needs);
         Ember.$('#' + active_mark.id).css('max-height', '100px');
       } else {
@@ -115,6 +115,24 @@ export default Ember.Controller.extend({
 
     saveSchedule(schedule);
   }.observes('class.marks.@each.grade', 'class.marks.@each.weight', 'class.marks.@each.total'),
+
+  wantChanged: function() {
+    var active_mark = this.get('active_mark');
+    var schedule = this.get('model');
+    var c = this.get('class');
+
+    if (active_mark && schedule && c) {
+      var want = active_mark.need_input_want;
+      if (want && active_mark.weight) {
+        // neededFor(weight, current_grade, f)
+        var need = neededFor(active_mark.weight, c.grade, want)
+        this.set('active_mark.need_input_need', need.grade);
+      } else {
+        this.set('active_mark.need_input_need', null);
+      }
+      saveSchedule(schedule);
+    }
+  }.observes('class.marks.@each.need_input_want'),
 
   actions: {
 

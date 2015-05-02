@@ -6,30 +6,29 @@ var ID = function () {
 };
 
 
-function calculateNeeded(mark, total_grade, total_weight) {
+function calculateNeeded(mark, current_grade, total_weight) {
   if (!mark.weight) {
     return [];
   }
 
-  var current_weight = total_weight - mark.weight;
-  var current_grade = total_grade;
-
-  console.log('current: ' + current_grade);
-  console.log('curr_weight: ' + current_weight);
-  console.log('weight: ' + mark.weight);
-
   return [
-    neededFor(mark.weight, total_grade, 50),
-    neededFor(mark.weight, total_grade, 60),
-    neededFor(mark.weight, total_grade, 70),
-    neededFor(mark.weight, total_grade, 80),
-    neededFor(mark.weight, total_grade, 90),
-    neededFor(mark.weight, total_grade, 100)
+    neededFor(mark.weight, current_grade, 50),
+    neededFor(mark.weight, current_grade, 60),
+    neededFor(mark.weight, current_grade, 70),
+    neededFor(mark.weight, current_grade, 80),
+    neededFor(mark.weight, current_grade, 90)
+    // neededFor(mark.weight, current_grade, 100)
   ];
 }
 
-function neededFor(weight, current_grade, current_weight, wanted) {
-  return (wanted - (current_weight * current_grade)) / weight;
+// calculates what you need to get on mark to have f overall
+// pass in all values as percent (i.e. between 0 and 100)
+function neededFor(weight, current_grade, f) {
+  // weights in decimal (< 1), grades in percent (0 < g < 100)
+  weight = weight / 100;
+  var grade = (f - current_grade) / weight;
+  // console.log('to get a ' + f + ' you need a ' + grade);
+  return {'grade': grade.toFixed(0), 'final': f};
 }
 
 function getSchedule(callback) {
@@ -100,6 +99,8 @@ function createMark(title) {
     total_grade: 0,
     weight: 0,
     needed: [],
+    need_input_want: null,
+    need_input_need: null,
     due: null, // this is a date, null when not set
   };
 }

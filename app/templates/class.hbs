@@ -5,7 +5,7 @@
             <div id="class-top" class="col s12 m8 offset-m2 z-depth-1">
                 <div id="class-header" class="row">
                     <div class="col s9">
-                        <h3 id="single-line" class="f-200">{{class.name}}</h3>
+                        <h3 class="truncate f-200">{{class.name}}</h3>
                         <p id="class-error" class="error">{{error}}</p>
                     </div>
                     <div class="col s3">
@@ -38,13 +38,7 @@
 
                 <div class="collapsible-body">
 
-                    <div {{bind-attr id=mark.id}} class="class-need row">
-                        <div class="col s12">
-                            <p>Test</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
+                    <div id="mark-input-container" class="row">
 
                         <div id="mark-input" class="input-field col s3">
                             {{input value=mark.weight type="text" length="3"}}
@@ -62,15 +56,41 @@
                         </div>
 
                         <div id="mark-icons" class="col s3">
-                            <div class="row center-align">
-                                <i class="fa fa-clock-o"></i>
-                            </div>
-
                             <div {{action 'deleteMark' mark.id}} id="mark-icon-down" class="click-area col s12 center-align">
-                                <i class="fa fa-trash-o"></i>
+                                <i class="fa fa-times"></i>
                             </div>
                         </div>
                     </div>
+
+                    {{# if mark.needed.length}}
+
+                    <div id="need-container" class="row center-align">
+
+                        {{#each need in mark.needed }}
+
+                        <div class="col s2 need">
+                            <p class="need-final">{{need.final}}</p>
+                            <p class="need-grade">{{need.grade}}</p>
+                        </div>
+
+                        {{/each}}
+
+                        <div class="col s2 need">
+                            <p id="need-final-input" class="need-final">
+                                {{input type="text" placeholder="want" value=mark.need_input_want}}
+                            </p>
+                            <p class="need-grade">
+                                {{#if mark.need_input_need}}
+                                    {{mark.need_input_need}}
+                                {{else}}
+                                    <span style="color:gray">need</span>
+                                {{/if}}
+                            </p>
+                        </div>
+
+                    </div>
+
+                    {{/if}}
 
                 </div>
             </li>

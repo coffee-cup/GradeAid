@@ -18,6 +18,10 @@ export default Ember.Controller.extend({
   },
 
   modelChanged: function() {
+    Ember.run.scheduleOnce('afterRender', this, function(){
+      Ember.$('.button-collapse').sideNav('hide');
+    });
+
     var schedule = this.get('model');
     if (schedule) {
       schedule.classes.forEach(function(element, index, array) {
@@ -31,5 +35,11 @@ export default Ember.Controller.extend({
 		// 		scope.this.set('model', request.schedule);
 		// 	}
 		// });
+
+  actions: {
+    willTransition: function(transition) {
+        console.log('testset');
+      }
+    }
 });
 

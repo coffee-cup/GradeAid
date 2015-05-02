@@ -4,6 +4,90 @@
 		"selected_items":
 		[
 			[
+				"bor",
+				"border-right"
+			],
+			[
+				"cur",
+				"current_grade〔variable〕"
+			],
+			[
+				"curr",
+				"current_weight"
+			],
+			[
+				"curre",
+				"current_weight"
+			],
+			[
+				"total",
+				"total_grade〔argument〕"
+			],
+			[
+				"totl",
+				"total_weight〔argument〕"
+			],
+			[
+				"need",
+				"neededFor〔function〕"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"tot",
+				"total_grade"
+			],
+			[
+				"active",
+				"active_mark〔variable〕"
+			],
+			[
+				"acti",
+				"active_mark"
+			],
+			[
+				"sch",
+				"schedule"
+			],
+			[
+				"new",
+				"newSchedule"
+			],
+			[
+				"li",
+				"listeners"
+			],
+			[
+				"of",
+				"overflow"
+			],
+			[
+				"schedule",
+				"schedule_key"
+			],
+			[
+				"to",
+				"toFixed〔function〕"
+			],
+			[
+				"tota",
+				"total_grade"
+			],
+			[
+				"act",
+				"active_id〔variable〕"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
 				"background",
 				"background-color: 〔property〕"
 			],
@@ -252,10 +336,6 @@
 				"background"
 			],
 			[
-				"max",
-				"max-width"
-			],
-			[
 				"yout",
 				"youtube_id"
 			],
@@ -416,18 +496,6 @@
 				"calculate_levels"
 			],
 			[
-				"tota",
-				"total_data"
-			],
-			[
-				"to",
-				"total_frames"
-			],
-			[
-				"tot",
-				"total_frames_read"
-			],
-			[
 				"ma",
 				"max_read"
 			],
@@ -444,81 +512,53 @@
 				"italic"
 			],
 			[
-				"bor",
-				"border"
-			],
-			[
 				"pag",
 				"pagedown"
-			],
-			[
-				"bac",
-				"background-color"
-			],
-			[
-				"tru",
-				"trustAsHtml"
-			],
-			[
-				"new",
-				"newmsgs"
-			],
-			[
-				"mess",
-				"messagesLength"
-			],
-			[
-				"messag",
-				"messagesLength"
-			],
-			[
-				"Page",
-				"PageSchema"
-			],
-			[
-				"public",
-				"public_page_room"
-			],
-			[
-				"head",
-				"header_title_show"
-			],
-			[
-				"mail",
-				"mailOptions"
-			],
-			[
-				"GMAIL",
-				"GMAIL_USERNAME"
-			],
-			[
-				"p",
-				"padding"
-			],
-			[
-				"random",
-				"randomColor"
-			],
-			[
-				"colo",
-				"colours"
-			],
-			[
-				"backgroundC",
-				"background-color:   (property)"
-			],
-			[
-				"msg",
-				"msg_height"
-			],
-			[
-				"scro",
-				"scrollTop  (function)"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "app/templates/class.hbs",
+			"settings":
+			{
+				"buffer_size": 5014,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/class.js",
+			"settings":
+			{
+				"buffer_size": 3853,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/assets/collapse-init.js",
+			"settings":
+			{
+				"buffer_size": 434,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/app.scss",
+			"settings":
+			{
+				"buffer_size": 2383,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 990,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -528,16 +568,36 @@
 	"command_palette":
 	{
 		"height": 400.0,
-		"last_filter": "ali",
+		"last_filter": "rei",
 		"selected_items":
 		[
 			[
-				"ali",
-				"AlignTab: Live Preview Mode"
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
 			],
 			[
 				"seth",
 				"Set Syntax: HTML"
+			],
+			[
+				"les",
+				"Less Tabs: Close Old Tabs"
+			],
+			[
+				"setc",
+				"Set Syntax: CSS"
+			],
+			[
+				"setcs",
+				"Set Syntax: CSS"
+			],
+			[
+				"ali",
+				"AlignTab: Live Preview Mode"
 			],
 			[
 				"tab",
@@ -550,10 +610,6 @@
 			[
 				"less",
 				"Less Tabs: Close Old Tabs"
-			],
-			[
-				"rei",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"ins",
@@ -736,10 +792,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"les",
-				"Less Tabs: Close Old Tabs"
-			],
-			[
 				"hml",
 				"HTMLPrettify"
 			],
@@ -888,10 +940,6 @@
 				"Trailing Spaces: Delete Trailing Spaces"
 			],
 			[
-				"re",
-				"Indentation: Reindent Lines"
-			],
-			[
 				"clo",
 				"Less Tabs: Close Old Tabs"
 			],
@@ -1016,35 +1064,65 @@
 	"expanded_folders":
 	[
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app"
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/components",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/helpers",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/styles",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/components",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/assets",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/assets/data"
 	],
 	"file_history":
 	[
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/app.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/application.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/assets/collapse-init.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/new.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/application.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/application.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/class.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/import.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/styles/app.less",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/class.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/assets/utils.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/components/nav.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/components/nav.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/dist/assets/utils.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/class.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/index.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/assets/notifier.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/manifest.json",
+		"/C/Users/jakerunzer/Downloads/icon/ios/AppIcon.appiconset/Contents.json",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/components/greater.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/components/.gitkeep",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/components/greater.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/index.html",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/about.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/about.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/background.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/about.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/new.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/new.hbs",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/background.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/application.hbs",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/application.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/application.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/helpers/highlight.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/overview.hbs",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/assets/attrchange.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/assets/nav-init.js",
+		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/sftp-config.json",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/styles/app.css",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/index.html",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/dist/assets/init.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/node_modules/ember-cli/node_modules/rimraf/test/test-async.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/index.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/about.hbs",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/router.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/sftp-config.json",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/node_modules/ember-cli/lib/broccoli/custom-static-compiler.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/bower_components/ember-cli-shims/app-shims.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/import.hbs",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/import.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/background.html",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/package.json",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/manifest.json",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/new.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/profile.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/routes/overview.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/overview.hbs",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/public/assets/auth.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/controllers/overview.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/Ember/material-app/app/templates/profile.hbs",
@@ -1127,37 +1205,18 @@
 		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/public/bower_components/jquery/src/var/hasOwn.js",
 		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/bower.json",
 		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/js/init.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/css/materialize.css",
-		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/js/materialize.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/views/popup.html",
-		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/js/popup.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/js/content.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/js/jquery.js",
-		"/C/Users/jakerunzer/Downloads/popup.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/css/styles.css",
-		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/popup.js",
-		"/C/Users/jakerunzer/Downloads/popup.html",
-		"/C/Users/jakerunzer/Dropbox/Programming/ChromeApps/TabVisualizer/icon.png",
-		"/C/Users/jakerunzer/Downloads/Koken_Installer/Koken_Installer/koken/index.php",
-		"/H/Documents/MediaDownloadFiles/torrents_mini.csv/torrents_mini.csv",
-		"/C/Users/jakerunzer/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/jakerunzer/Dropbox/Programming/Node/plug_bot/sftp-config.json",
-		"/C/Users/jakerunzer/Dropbox/Programming/Node/plug_bot/secrets.js",
-		"/C/Users/jakerunzer/Dropbox/Programming/Node/plug_bot/.gitignore",
-		"/C/Users/jakerunzer/AppData/Roaming/Sublime Text 3/Packages/User/Colorsublime.sublime-settings",
-		"/C/Users/jakerunzer/Dropbox/Programming/Node/plug_bot/file.txt",
-		"/C/Users/jakerunzer/Downloads/lab-material/lab-material/lab10/reader.cpp",
-		"/C/Users/jakerunzer/Downloads/lab-material/lab-material/lab10/hash_table.hpp"
+		"/C/Users/jakerunzer/Dropbox/Programming/websites/jakerunzer/css/materialize.css"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
 		"height": 92.0,
 		"where_history":
 		[
+			"app/",
 			"*",
 			"*.js",
 			""
@@ -1168,6 +1227,45 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"%",
+			"                        <div class=\"col s2 need\">\n                            <p>90%</p>\n                            <p>30</p>\n                        </div>",
+			"<p>",
+			"World",
+			"nav",
+			"curr_weight",
+			"class",
+			"curr",
+			"current_weight",
+			"total_weight",
+			"total_grade",
+			"grade,",
+			"total_weight",
+			"active_mark",
+			"1.4",
+			"this",
+			"null",
+			"2",
+			"Stuff",
+			"utils",
+			"class_name",
+			"params",
+			"model",
+			"new_class",
+			"P",
+			"updatedProperty",
+			"nav",
+			"utils",
+			"class=\"validate\"",
+			" id=\"mark-input-text\"",
+			"<input id=\"icon_prefix\" type=\"text\" class=\"validate\">",
+			"left",
+			"marks",
+			"mar_title",
+			"class_title",
+			"class_name",
+			"10",
+			"1",
+			"01B0F0",
 			"request",
 			"red",
 			"form",
@@ -1256,46 +1354,7 @@
 			"holder.js",
 			"artist",
 			"pintical",
-			"data",
-			"song",
-			"lastfm",
-			"artist",
-			"artistmatches",
-			"artist",
-			"router",
-			"trusty64",
-			"base",
-			"../components",
-			"../compon",
-			"css",
-			"null",
-			"world",
-			"RATE",
-			"numpy",
-			"power",
-			"chunk",
-			"int",
-			"size",
-			"ffty",
-			"ffty2",
-			"ffty1",
-			"numpy",
-			"status",
-			"frame_count",
-			"test",
-			"code",
-			"color",
-			"room",
-			"show",
-			"about",
-			"homeController",
-			"newmsgs",
-			"message",
-			"msg",
-			"error",
-			"success",
-			"error",
-			"conig"
+			"data"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1324,14 +1383,477 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/templates/class.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2651,
+								2651
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SublimeLinter/fixed-syntaxes/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 894.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/class.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3853,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1312,
+								1312
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 741.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/assets/collapse-init.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 434,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								383,
+								383
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/styles/app.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2383,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2047,
+								2047
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1711.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 990,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								295,
+								264
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 36.0
 	},
 	"input":
 	{
@@ -1390,6 +1912,18 @@
 		"selected_items":
 		[
 			[
+				"u",
+				"dist\\assets\\utils.js"
+			],
+			[
+				"abou",
+				"app\\controllers\\about.js"
+			],
+			[
+				"over",
+				"app\\templates\\overview.hbs"
+			],
+			[
 				"appcs",
 				"app\\styles\\app.css"
 			],
@@ -1428,10 +1962,6 @@
 			[
 				"router",
 				"app\\router.js"
-			],
-			[
-				"over",
-				"app\\templates\\overview.hbs"
 			],
 			[
 				"pro",
@@ -1492,10 +2022,6 @@
 			[
 				"stcs",
 				"public\\css\\style.css"
-			],
-			[
-				"abou",
-				"views\\about.handlebars"
 			],
 			[
 				"scs",
@@ -1854,10 +2380,6 @@
 				"message.py"
 			],
 			[
-				"u",
-				"util.py"
-			],
-			[
 				"mp",
 				"main.py"
 			],
@@ -1930,7 +2452,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 274.0,
+	"side_bar_width": 223.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
