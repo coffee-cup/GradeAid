@@ -26,9 +26,6 @@ export default Ember.Route.extend({
       }
 
       scope.this.controllerFor('class').set('class', c);
-
-      schedule.last_class = params.class_id
-      saveSchedule(schedule);
     });
   }
 });
