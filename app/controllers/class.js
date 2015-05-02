@@ -136,6 +136,10 @@ export default Ember.Controller.extend({
 
   actions: {
 
+    deleteClass: function(class_id) {
+      console.log('will delete class ' + class_id);
+    },
+
     deleteMark: function(mark_id) {
       var mark = this.get('active_mark');
       var c = this.get('class');

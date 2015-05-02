@@ -4,12 +4,16 @@
         <div class="row">
             <div id="class-top" class="col s12 m8 offset-m2 z-depth-1">
                 <div id="class-header" class="row">
-                    <div class="col s9">
+                    <div class="col s8">
                         <h3 class="truncate f-200">{{class.name}}</h3>
                         <p id="class-error" class="error">{{error}}</p>
                     </div>
                     <div class="col s3">
                         <h3 class="f-200">{{class.grade}}</h3>
+                    </div>
+                    <div id="class-delete" {{action 'deleteClass' class.id}} class="col s1 click-area">
+                        <!-- <i id="class-delete" class="fa fa-times fa-2x"></i> -->
+                        <i class="mdi-content-clear"></i>
                     </div>
                 </div>
             </div>
@@ -107,8 +111,9 @@
                             <label for="mark_title">Mark Title</label>
                         </div>
                     </div>
-                    <div id="mark-click-area" {{action 'addMark'}} class="col s2">
-                        <i id="mark-add-icon" class="fa fa-plus fa-2x"></i>
+                    <div id="mark-add-icon" {{action 'addMark'}} class="col s2 center-align click-area">
+                        <!-- <i id="mark-add-icon" class="fa fa-plus fa-2x"></i> -->
+                        <i class="mdi-content-add"></i>
                     </div>
                 </div>
 
@@ -118,9 +123,9 @@
     </div>
 </div>
 
-{{class.id}}
+<!-- {{class.id}}
 <br>
-{{class.marks.length}}
+{{class.marks.length}} -->
 
 
 <script src="assets/attrchange.js"></script>

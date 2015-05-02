@@ -36,9 +36,10 @@ html {
 }
 #add-icon {
   color: grey;
+  font-size: 3em;
 }
 #add-class-title {
-  margin-top: -1.5em;
+  margin-top: -2em;
 }
 #profile-link {
   padding-top: 1.8em;
@@ -85,12 +86,19 @@ html {
 #mark-list-item {
 
 }
-#mark-add-icon {
-  margin-top: 1.5em;
-  padding-left: 1em;
+#class-delete {
+  color: rgb(200, 200, 200);
+  padding-top: 0.5em;
+  font-size: 2em;
+
+  i {
+    margin-left: 1em;
+  }
 }
-#mark-click-area {
-  cursor:pointer;
+#mark-add-icon {
+  margin-top: 0.7em;
+  padding-left: 1em;
+  font-size: 3em;
 }
 #mark-input {
   margin-top: 1.4em;
@@ -101,7 +109,7 @@ html {
 }
 #mark-icon-down {
   color: gray;
-  margin-left: 1em;
+  margin-left: 1.5em;
 }
 #mark-input-container {
   margin-bottom: 0;
