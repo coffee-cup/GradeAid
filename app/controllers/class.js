@@ -40,16 +40,6 @@ export default Ember.Controller.extend({
     }
   }.observes('class'),
 
-  active_id: '9ye5mh57r',
-
-  changeActive: function() {
-    var active_id = this.get('active_id');
-
-    if (active_id) {
-
-    }
-  }.observes('active_id').on('init'),
-
   gradeChanged: function() {
     var schedule = this.get('model');
     var c = this.get('class');
@@ -185,6 +175,7 @@ export default Ember.Controller.extend({
 
     activeChanged: function(active_id) {
       var c = this.get('class');
+
       for (var i=0;i<c.marks.length;i++) {
         var m = c.marks[i];
         if (m.id === active_id) {

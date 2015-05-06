@@ -1,5 +1,5 @@
 {
-  "name": "material-app",
+  "name": "GradeAid",
   "dependencies": {
     "ember": "1.10.0",
     "ember-data": "1.0.0-beta.16",

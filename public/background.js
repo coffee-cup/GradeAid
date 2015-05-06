@@ -7,8 +7,8 @@ chrome.app.runtime.onLaunched.addListener(function() {
 
 function loadWindow() {
   // Center window on screen.
-  var width = 800;
-  var height = 600;
+  var width = 1100;
+  var height = 700;
   var screenWidth = screen.availWidth;
   var screenHeight = screen.availHeight;
 

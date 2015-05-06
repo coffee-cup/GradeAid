@@ -9,7 +9,7 @@ html {
   overflow: hidden;
 }
 #nav {
-  height: 172px;
+  height: 180px;
   background-color: $nav_color;
 }
 #content {
@@ -83,8 +83,10 @@ html {
 #class-marks {
   margin-top: 5em;
 }
-#mark-list-item {
-
+#mark-title {
+  .row {
+    margin-bottom: 0;
+  }
 }
 #class-delete {
   color: rgb(200, 200, 200);
@@ -109,7 +111,7 @@ html {
 }
 #mark-icon-down {
   color: gray;
-  margin-left: 1.2em;
+  margin-left: 1.7em;
 }
 #mark-input-container {
   margin-bottom: 0;

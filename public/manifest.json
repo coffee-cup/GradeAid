@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Material App",
-  "version": "2.1",
+  "name": "GradeAid",
+  "version": "0.5",
   "minimum_chrome_version": "23",
   "icons": {
     "16": "assets/icons/icon16.png",

@@ -1,5 +1,5 @@
 {
-  "name": "material-app",
+  "name": "GradeAid",
   "version": "0.0.0",
   "description": "Student scheduler app to keep track of class marks",
   "private": true,

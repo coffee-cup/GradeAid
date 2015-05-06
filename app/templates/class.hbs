@@ -32,7 +32,16 @@
                 <div {{action 'activeChanged' mark.id}} class="collapsible-header mark-cheader">
                     <div class="row">
                         <div id="mark-title" class="col s9">
-                            {{mark.title}}
+
+                            <div class="row">
+                                <div class="col s12">
+                                    {{mark.title}}
+                                </div>
+                            </div>
+
+                            <!-- {{mark.title}}
+
+                            <i class="mdi-editor-mode-edit"></i> -->
                         </div>
                         <div class="col s3 right-align">
                             {{computedGrade mark.grade mark.total}}
@@ -44,25 +53,42 @@
 
                     <div id="mark-input-container" class="row">
 
-                        <div id="mark-input" class="input-field col s3">
-                            {{input value=mark.weight type="text" length="3"}}
-                            <label class="active" for="icon_prefix">Weight</label>
-                        </div>
+                        <div class="col s9">
 
-                        <div id="mark-input" class="input-field col s3">
-                            {{input value=mark.grade type="text" length="3"}}
-                            <label class="active" for="icon_prefix">Grade</label>
-                        </div>
+                            <div class="mark-edit-panel row">
 
-                        <div id="mark-input" class="input-field col s3">
-                            {{input placeholder="100" value=mark.total type="text" length="3"}}
-                            <label class="active" for="icon_prefix">Total</label>
+                                <div id="mark-input" class="input-field col s3">
+                                    {{input value=mark.weight type="text" length="3"}}
+                                    <label class="active" for="icon_prefix">Weight</label>
+                                </div>
+
+                                <div id="mark-input" class="input-field col s3">
+                                    {{input value=mark.grade type="text" length="3"}}
+                                    <label class="active" for="icon_prefix">Grade</label>
+                                </div>
+
+                                <div id="mark-input" class="input-field col s3">
+                                    {{input placeholder="100" value=mark.total type="text" length="3"}}
+                                    <label class="active" for="icon_prefix">Total</label>
+                                </div>
+
+                            </div>
+
                         </div>
 
                         <div id="mark-icons" class="col s3">
-                            <div {{action 'deleteMark' mark.id}} id="mark-icon-down" class="click-area col s12 center-align">
-                                <!-- <i class="fa fa-times"></i> -->
-                                <i class="mdi-content-clear"></i>
+
+                            <div class="row">
+                                <div class="col s12">
+                                    <div {{action 'deleteMark' mark.id}} id="mark-icon-down" class="click-area col s12 center-align">
+                                        <i class="mdi-content-clear"></i>
+                                    </div>
+                                </div>
+                                <!-- <div class="col s12">
+                                    <div id="mark-icon-down" class="edit-button col s12 click-area center-align">
+                                        <i class="mdi-editor-mode-edit"></i>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -86,9 +112,9 @@
                             </p>
                             <p class="need-grade">
                                 {{#if mark.need_input_need}}
-                                    {{mark.need_input_need}}
+                                {{mark.need_input_need}}
                                 {{else}}
-                                    <span style="color:gray">need</span>
+                                <span style="color:gray">need</span>
                                 {{/if}}
                             </p>
                         </div>
@@ -128,6 +154,12 @@
 <br>
 {{class.marks.length}} -->
 
+<!-- <section class="linear">
+    <div class="scotch-panel" data-clickSelector="section.linear, .all-same-time" data-transition="linear">
+       <h2>Linear</h2>
+   </div>
+   <h2>Linear</h2>
+</section> -->
 
-<script src="assets/attrchange.js"></script>
+<script src="assets/scotchPanels.min.js"></script>
 <script src="assets/collapse-init.js"></script>
