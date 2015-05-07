@@ -11,6 +11,8 @@ export default Ember.Controller.extend({
 
   authors: ["Jake", "Abhi", "Tyson"],
 
+  mades: ['Love', 'Happiness', 'Code', 'Molecules', 'Science', 'a Computer', 'a Dinosaur'],
+
   footer_message: "",
 
   import_error: "",
@@ -35,9 +37,12 @@ export default Ember.Controller.extend({
       this.set('schedule_string', JSON.stringify(schedule));
     }
 
+    var mades = this.get('mades');
+    var made = mades[Math.floor(Math.random()*mades.length)];
+
     var names = this.get('authors');
     var shuffled = shuffle(names);
-    var message = 'Made with love by ' + shuffled[0] + ', ' + shuffled[1] + ', and ' + shuffled[2];
+    var message = 'Made with ' + made + ' by ' + shuffled[0] + ', ' + shuffled[1] + ', and ' + shuffled[2];
     this.set('footer_message', message);
   }.observes('model'),
 
