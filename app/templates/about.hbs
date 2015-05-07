@@ -1,8 +1,41 @@
-<div id="content"class="row">
-    <div class="col s12">
-        <h1>About</h1>
+<div class="row">
+    <div class="col s12 m4">
+        <h2>Reset</h2>
+        <div class="about-section">
+            <p class="flow-text">Erase schedule and start fresh</p>
 
-        <a {{action 'resetSchedule'}} class="waves-effect waves-light btn">Reset Schedule</a>
+            <div class="center-align">
+                <a {{action 'resetSchedule'}} class="waves-effect waves-light btn">Erase All and Reset</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m4">
+        <h2>Import</h2>
+        <div class="about-section">
+            <p class="flow-text">Import schedule from Json text</p>
+
+            <p class="error">{{import_error}}</p>
+
+            <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="import-text">Import Text</label>
+            </div>
+
+
+            <div class="center-align">
+            <a {{action 'importSchedule'}} class="waves-effect waves-light btn">Erase All and Import</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m4">
+        <h2>Export</h2>
+        <div class="about-section">
+            <p class="flow-text">Schedule as string</p>
+
+            {{textarea id="export-text" value=schedule_string cols="80" rows="6" disabled="true"}}
+
+        </div>
     </div>
 </div>
-
