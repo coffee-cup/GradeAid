@@ -1,4 +1,4 @@
-<div class="row">
+<div id="about-content" class="row">
     <div class="col s12 m4">
         <h2>Reset</h2>
         <div class="about-section">
@@ -25,7 +25,7 @@
 
 
             <div class="center-align">
-            <a {{action 'importSchedule'}} class="waves-effect waves-light btn">Erase All and Import</a>
+                <a {{action 'importSchedule'}} class="waves-effect waves-light btn">Erase All and Import</a>
             </div>
         </div>
     </div>
@@ -40,3 +40,14 @@
         </div>
     </div>
 </div>
+
+<footer id="custom-footer" class="page-footer">
+    <div class="">
+        <div id="footer-row" class="row">
+            <div class="col l6 s12">
+                <p class="white-text">{{footer_message}}</p>
+            </div>
+      </div>
+  </div>
+</footer>
+

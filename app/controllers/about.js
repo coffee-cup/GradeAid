@@ -9,6 +9,10 @@ export default Ember.Controller.extend({
 
   schedule_import: null,
 
+  authors: ["Jake", "Abhi", "Tyson"],
+
+  footer_message: "",
+
   import_error: "",
 
   schedule_string: "",
@@ -30,6 +34,11 @@ export default Ember.Controller.extend({
     if (schedule) {
       this.set('schedule_string', JSON.stringify(schedule));
     }
+
+    var names = this.get('authors');
+    var shuffled = shuffle(names);
+    var message = 'Made with love by ' + shuffled[0] + ', ' + shuffled[1] + ', and ' + shuffled[2];
+    this.set('footer_message', message);
   }.observes('model'),
 
   actions: {

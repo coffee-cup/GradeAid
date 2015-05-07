@@ -1,5 +1,6 @@
 $nav_color: #FF7E0A;
 $sub_color: #EE3633;
+$footer_color: #C76208;
 
 html {
   overflow: auto;
@@ -213,6 +214,20 @@ nav {
 .click-area {
   cursor:pointer;
 }
+#custom-footer {
+  margin-left: 0 !important;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: $footer_color;
+  padding-top: 0;
+}
+#footer-row {
+  margin-bottom: 0;
+}
+#about-content {
+  margin-bottom: 60px;
+}
 
 header, #main, footer {
   margin-left: 240px;
@@ -231,3 +246,13 @@ header, #main, footer {
     margin-left: 0;
   }
 }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
