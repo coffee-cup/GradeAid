@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
 
   authors: ["Jake", "Abhi", "Tyson"],
 
-  mades: ['Love', 'Happiness', 'Code', 'Molecules', 'Science', 'a Computer', 'a Dinosaur'],
+  mades: ['Love', 'Happiness', 'Code', 'Molecules', 'Science', 'a Computer', 'a Dinosaur', 'Zest'],
 
   footer_message: "",
 
