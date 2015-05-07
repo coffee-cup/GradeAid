@@ -84,6 +84,7 @@ function createClass(name, colour) {
     name: name,
     colour: colour,
     grade: 0,
+    total_weight: 0,
     marks: []
   };
 }

@@ -91,17 +91,15 @@ export default Ember.Controller.extend({
       if (active_mark.weight && active_mark.weight > 0 && (!active_mark.grade || active_mark.grade == 0)) {
         var needed = active_mark.needed;
         var needs = calculateNeeded(active_mark, total_grade, total_weight);
-        // console.log(needs);
         this.set('active_mark.needed', needs);
-        Ember.$('#' + active_mark.id).css('max-height', '100px');
       } else {
         this.set('active_mark.needed', []);
-        Ember.$('#' + active_mark.id).css('max-height', '0');
       }
     }
 
     // c.grade = total_grade;
     this.set('class.grade', total_grade);
+    this.set('class.total_weight', total_weight);
 
     saveSchedule(schedule);
   }.observes('class.marks.@each.grade', 'class.marks.@each.weight', 'class.marks.@each.total'),
@@ -180,6 +178,18 @@ export default Ember.Controller.extend({
         var m = c.marks[i];
         if (m.id === active_id) {
           this.set('active_mark', m);
+
+          var active_mark = m;
+          if (active_mark.weight && active_mark.weight > 0 && (!active_mark.grade || active_mark.grade == 0)) {
+            var needed = active_mark.needed;
+            var needs = calculateNeeded(active_mark, c.grade, c.total_weight);
+            this.set('active_mark.needed', needs);
+          } else {
+            this.set('active_mark.needed', []);
+          }
+
+          saveSchedule()
+
           break;
         }
       }
