@@ -17,6 +17,12 @@ export default Ember.Controller.extend({
     this._super();
     scope.this = this;
     scope.newSchedule = newSchedule
+
+    notifier.addListener(function() {
+      getSchedule(function(schedule) {
+        scope.this.set('model', schedule);
+      });
+    });
   },
 
   modelUpdate: function() {
@@ -33,9 +39,21 @@ export default Ember.Controller.extend({
     },
 
     importSchedule: function() {
-      var newSchedule = this.get('schedule_import');
-      if (newSchedule) {
+      var newScheduleString = this.get('schedule_import');
+      if (newScheduleString) {
+        var json = null;
+        try {
+          var json = JSON.parse(newScheduleString);
+        } catch (err) {
+          this.set('import_error', 'invalid schedule');
+        }
 
+        if (json) {
+          // valid schedule we assume
+          this.set('import_error', '');
+          saveSchedule(json);
+          this.set('schedule_import', '');
+        }
       }
     }
   }
