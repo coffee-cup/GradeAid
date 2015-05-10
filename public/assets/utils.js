@@ -120,8 +120,6 @@ function getSchedules(callback) {
       var key = "schedule-" + data.current_schedule_id;
       // add the current schedule as first element of array
       if (data.schedules[key]) {
-        console.log('pushing on extra: ' + key);
-        console.log(data.schedules[key]);
         allSchedules.push(data.schedules[key]);
       }
 
@@ -129,11 +127,8 @@ function getSchedules(callback) {
       for (var i=0;i<data.all_schedule_ids.length;i++) {
         if (data.all_schedule_ids[i]) {
           var key = 'schedule-' + data.all_schedule_ids[i];
-          console.log('key: ' + key);
-          console.log('current: ' + data.current_schedule_id);
           if (data.schedules[key] && data.schedules[key].id != data.current_schedule_id) {
             allSchedules.push(data.schedules[key]);
-            console.log('normal pushing on normal ' + data.schedules[key])
           }
         }
       }
@@ -186,7 +181,9 @@ function saveSchedule(schedule, callback) {
   var json = JSON.stringify(schedule);
   // console.log('saving ' + json);
   var key = "schedule-" + schedule.id;
-  // console.log('saving schedule with key: ' + key);
+  console.log('saving schedule with key: ' + key);
+  console.log(schedule);
+  console.log('\n');
 
   chrome.storage.sync.get('schedules', function(data) {
     var schedules = data.schedules;
@@ -204,7 +201,6 @@ function saveSchedule(schedule, callback) {
     });
   });
 }
-
 
 // Math, Stats
 function createClass(name, colour) {

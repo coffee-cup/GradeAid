@@ -11,11 +11,11 @@ export default Ember.Controller.extend({
     this._super();
     scope.this = this;
 
-    notifier.addListener('update', function() {
-      getSchedule(function(schedule) {
-        scope.this.set('model', schedule);
-      });
-    });
+    // notifier.addListener('update', function() {
+    //   getSchedule(function(schedule) {
+    //     scope.this.set('model', schedule);
+    //   });
+    // });
   },
 
   // return background colour in css based on the clases colour
@@ -27,24 +27,41 @@ export default Ember.Controller.extend({
     return 'background-color: ' + 'white';
   }.property('class'),
 
-  // sets all the needed sections max-heights
-  setMaxHeights: function() {
-    var c = this.get('class');
-    if (c) {
+  // // sets all the needed sections max-heights
+  // setMaxHeights: function() {
+  //   var c = this.get('class');
+  //   if (c) {
 
-      Ember.run.scheduleOnce('afterRender', this, function(){
-        for (var i=0;i<c.marks.length;i++) {
-          var m = c.marks[i];
-          if (m.weight && m.weight > 0 && (!m.grade || m.grade == 0)) {
-            Ember.$('#' + m.id).css('max-height', '100px');
-          } else {
-            Ember.$('#' + m.id).css('max-height', '0');
-          }
-        }
-      });
+  //     Ember.run.scheduleOnce('afterRender', this, function(){
+  //       for (var i=0;i<c.marks.length;i++) {
+  //         var m = c.marks[i];
+  //         if (m.weight && m.weight > 0 && (!m.grade || m.grade == 0)) {
+  //           Ember.$('#' + m.id).css('max-height', '100px');
+  //         } else {
+  //           Ember.$('#' + m.id).css('max-height', '0');
+  //         }
+  //       }
+  //     });
 
-    }
-  }.observes('class'),
+  //   }
+  // }.observes('class'),
+
+  // modelChanged: function() {
+  //   var class_id = this.get('class_id');
+  //   var schedule = this.get('model');
+
+  //   if (class_id && schedule) {
+  //     var c = null;
+  //     for (var i=0; i<schedule.classes.length; i++) {
+  //       if (schedule.classes[i].id === class_id) {
+  //         c = schedule.classes[i];
+  //         break;
+  //       }
+  //     }
+
+  //     scope.this.set('class', c);
+  //   }
+  // }.observes('model'),
 
   gradeChanged: function() {
     var schedule = this.get('model');
