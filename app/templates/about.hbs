@@ -44,10 +44,27 @@
 <footer id="custom-footer" class="page-footer">
     <div class="">
         <div id="footer-row" class="row">
-            <div class="col l6 s12">
+            <div class="col s12 m6">
                 <p class="white-text">{{footer_message}}</p>
             </div>
-      </div>
-  </div>
+            <div id="buy-us" class="col s12 m6">
+                <p class="class-white-text">
+                    <a {{action 'buyUs'}} id="buy-us-button" class="click-area">
+                        Buy us a Beer
+                    </a>
+                </p>
+            </div>
+            {{#if show_buy_us}}
+            <div class="col s12">
+                <p class="white-text">
+                    <div id="bitcoin-input-div" class="input">
+                        Bitcoins! - {{input id="bitcoin-input" value=bitcoin_address disabled="true"}}
+                    </div>
+                </p>
+            </div>
+            {{/if}}
+        </div>
+
+    </div>
 </footer>
 

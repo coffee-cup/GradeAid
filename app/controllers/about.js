@@ -46,7 +46,15 @@ export default Ember.Controller.extend({
     this.set('footer_message', message);
   }.observes('model'),
 
+  show_buy_us: false,
+
+  bitcoin_address: '167gQGnatratDh4UJbXi63arMoLL3M92zA',
+
   actions: {
+    buyUs: function() {
+      this.set('show_buy_us', true);
+    },
+
     resetSchedule: function() {
       var newSchedule = scope.newSchedule();
       saveSchedule(newSchedule);
