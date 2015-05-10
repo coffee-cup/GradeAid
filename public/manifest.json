@@ -1,6 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "GradeAid",
+  "name": "GradeAid Grade Calculator",
+  "short_name": "GradeAid",
+  "description": "",
   "version": "0.5",
   "minimum_chrome_version": "23",
   "icons": {
