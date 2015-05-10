@@ -13,6 +13,10 @@ export default Ember.Route.extend({
     this.controllerFor('new').set('class_name', '');
 
     getSchedule(function(schedule) {
+      if (!schedule) {
+        scope.this.transitionToRoute('index');
+      }
+
       scope.this.controllerFor('new').set('model', schedule);
     });
   }

@@ -10,6 +10,12 @@ export default Ember.Controller.extend({
   init: function() {
     this._super();
     scope.this = this;
+
+    notifier.addListener('update', function() {
+      getSchedule(function(schedule) {
+        scope.this.set('model', schedule);
+      });
+    });
   },
 
   backgroundColour: function() {

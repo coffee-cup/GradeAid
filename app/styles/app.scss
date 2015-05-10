@@ -98,6 +98,18 @@ html {
     margin-left: 1em;
   }
 }
+#schedule-delete {
+  color: rgb(200, 200, 200);
+  padding-top: 0.5em;
+  font-size: 2em;
+
+  i {
+    margin-left: -0.5em;
+  }
+}
+#schedule-title-input {
+  font-size: 2em;
+}
 #buy-us-button {
   color: white;
   text-decoration: underline;
@@ -188,9 +200,9 @@ nav {
     }
   }
 }
-.about-section {
-  border-left: 1px solid $nav_color;
-  padding-left: 1.5em
+#schedule-section {
+  border-right: solid 1px $nav_color;
+  padding-right: 4em;
 }
 #export-text {
   height: 10em;
@@ -230,6 +242,15 @@ nav {
 }
 .click-area {
   cursor:pointer;
+}
+#schedule-select{
+  .select-button-class:first-child {
+    display: none;
+  }
+}
+#schedule-select-button {
+  font-size: 3em;
+  margin-top: 0.2em;
 }
 #custom-footer {
   margin-left: 0 !important;

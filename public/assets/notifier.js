@@ -1,16 +1,24 @@
 var notifier = {
 
-  listeners: [],
+  keys: [],
 
-  addListener: function(listener) {
-    this.listeners.push(listener);
+  addListener: function(key, listener) {
+    var listeners = this.keys[key];
+    if (!listeners) {
+      listeners = [];
+    }
+    listeners.push(listener);
+    this.keys[key] = listeners;
   },
 
-  sendNotification: function() {
+  sendNotification: function(key) {
     // console.log(this.listeners);
-    this.listeners[0]();
-    for(var i=0;i<this.listeners.length;i++) {
-      this.listeners[i]();
+    var listeners = this.keys[key];
+    if (!listeners) {
+      return;
+    }
+    for(var i=0;i<listeners.length;i++) {
+      listeners[i]();
     }
   }
 }

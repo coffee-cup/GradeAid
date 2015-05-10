@@ -16,12 +16,18 @@ export default Ember.Route.extend({
     this.controllerFor('class').set('class', null);
 
     getSchedule(function(schedule) {
+      if (!schedule) {
+        scope.this.transitionToRoute('index');
+      }
+
       scope.this.controllerFor('class').set('model', schedule);
 
       var c = null;
       for (var i=0; i<schedule.classes.length; i++) {
         if (schedule.classes[i].id === params.class_id) {
           c = schedule.classes[i];
+          schedule.last_class = c.id;
+          saveSchedule(schedule);
         }
       }
 

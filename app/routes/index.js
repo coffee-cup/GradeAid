@@ -7,10 +7,11 @@ var scope = {
 export default Ember.Route.extend({
   beforeModel: function() {
     scope.this = this;
+    console.log('getting schedule');
     getSchedule(function(schedule) {
-    // this.transitionTo('class', 'veai5drqq');
-
-      if (schedule.last_class) {
+      if (!schedule) {
+        // do not transition to anything, wait on index page for something to happen
+      } else if (schedule.last_class) {
         scope.this.transitionTo('class', schedule.last_class);
       } else {
         scope.this.transitionTo('new');
