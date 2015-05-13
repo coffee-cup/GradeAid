@@ -11,11 +11,12 @@ export default Ember.Controller.extend({
     this._super();
     scope.this = this;
 
-    // notifier.addListener('update', function() {
-    //   getSchedule(function(schedule) {
-    //     scope.this.set('model', schedule);
-    //   });
-    // });
+    notifier.addListener('title_update', function() {
+      console.log('yo fuckers');
+      getSchedule(function(schedule) {
+        scope.this.set('model', schedule);
+      });
+    });
   },
 
   // return background colour in css based on the clases colour
@@ -27,42 +28,28 @@ export default Ember.Controller.extend({
     return 'background-color: ' + 'white';
   }.property('class'),
 
-  // // sets all the needed sections max-heights
-  // setMaxHeights: function() {
-  //   var c = this.get('class');
-  //   if (c) {
+  // called when the schedule changes
+  modelChanged: function() {
+    var class_id = this.get('class_id');
+    var schedule = this.get('model');
 
-  //     Ember.run.scheduleOnce('afterRender', this, function(){
-  //       for (var i=0;i<c.marks.length;i++) {
-  //         var m = c.marks[i];
-  //         if (m.weight && m.weight > 0 && (!m.grade || m.grade == 0)) {
-  //           Ember.$('#' + m.id).css('max-height', '100px');
-  //         } else {
-  //           Ember.$('#' + m.id).css('max-height', '0');
-  //         }
-  //       }
-  //     });
+    console.log('the schedule changed to this');
+    console.log(schedule);
 
-  //   }
-  // }.observes('class'),
+    if (class_id && schedule) {
+      var c = null;
+      for (var i=0; i<schedule.classes.length; i++) {
+        if (schedule.classes[i].id === class_id) {
+          c = schedule.classes[i];
+          break;
+        }
+      }
 
-  // modelChanged: function() {
-  //   var class_id = this.get('class_id');
-  //   var schedule = this.get('model');
+      scope.this.set('class', c);
+    }
+  }.observes('model'),
 
-  //   if (class_id && schedule) {
-  //     var c = null;
-  //     for (var i=0; i<schedule.classes.length; i++) {
-  //       if (schedule.classes[i].id === class_id) {
-  //         c = schedule.classes[i];
-  //         break;
-  //       }
-  //     }
-
-  //     scope.this.set('class', c);
-  //   }
-  // }.observes('model'),
-
+  // when the weight, total, or mark grade is called
   gradeChanged: function() {
     var schedule = this.get('model');
     var c = this.get('class');
@@ -124,7 +111,9 @@ export default Ember.Controller.extend({
     this.set('class.grade', total_grade);
     this.set('class.total_weight', total_weight);
 
-    saveSchedule(schedule);
+    if (active_mark) {
+      saveSchedule(schedule);
+    }
   }.observes('class.marks.@each.grade', 'class.marks.@each.weight', 'class.marks.@each.total'),
 
   wantChanged: function() {
@@ -141,6 +130,7 @@ export default Ember.Controller.extend({
       } else {
         this.set('active_mark.need_input_need', null);
       }
+
       saveSchedule(schedule);
     }
   }.observes('class.marks.@each.need_input_want'),

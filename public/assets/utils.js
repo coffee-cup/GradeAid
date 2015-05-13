@@ -55,8 +55,6 @@ function setupSchedule(callback) {
           // console.log('set current schedule id and returning');
           callback(newSchedule);
         });
-
-        addScheduleKey(newSchedule);
       });
     }
   });
@@ -71,17 +69,25 @@ function loadSchedule(schedule_id) {
 }
 
 function addScheduleKey(schedule, callback) {
+  console.log('told to add id ' + schedule.id);
   chrome.storage.sync.get('all_schedule_ids', function(data) {
+    console.log(data);
     var allScheduleIds = data.all_schedule_ids;
     if (!allScheduleIds) {
-      allScheduleIds = []
+      allScheduleIds = [];
+      console.log('made new one');
     }
-    allScheduleIds.push(schedule.id);
-    chrome.storage.sync.set({'all_schedule_ids': allScheduleIds}, function() {
-      if (callback) {
-        callback();
-      }
-    });
+
+    if (allScheduleIds.indexOf(schedule.id)) {
+      allScheduleIds.push(schedule.id);
+      chrome.storage.sync.set({'all_schedule_ids': allScheduleIds}, function() {
+        if (callback) {
+          callback();
+        }
+      });
+    } else {
+      callback();
+    }
   });
 }
 
@@ -110,53 +116,61 @@ function getCurrentScheduleId() {
   return scope.current_schedule_id;
 }
 
-// get an array of all schedules
-function getSchedules(callback) {
-  chrome.storage.sync.get(['schedules', 'all_schedule_ids', 'current_schedule_id'], function(data) {
-    var allSchedules = [];
-    console.log(data);
-    if (data.schedules && data.all_schedule_ids && data.current_schedule_id) {
-
-      var key = "schedule-" + data.current_schedule_id;
-      // add the current schedule as first element of array
-      if (data.schedules[key]) {
-        allSchedules.push(data.schedules[key]);
-      }
-
-      // add the rest to the all schedules array
-      for (var i=0;i<data.all_schedule_ids.length;i++) {
-        if (data.all_schedule_ids[i]) {
-          var key = 'schedule-' + data.all_schedule_ids[i];
-          if (data.schedules[key] && data.schedules[key].id != data.current_schedule_id) {
-            allSchedules.push(data.schedules[key]);
-          }
-        }
-      }
-
-    }
-    callback(allSchedules);
-  });
-}
-
 // get a schedule with id
 function getScheduleWithId(schedule_id, callback) {
   var schedule = null;
   var key = "schedule-" + schedule_id;
-  // console.log('looking for schedule with key: ' + key);
-  chrome.storage.sync.get('schedules', function(data) {
-    // console.log(data);
-    var schedule = data.schedules[key];
+
+  console.log('trying to get schedule with key ' + key);
+  chrome.storage.sync.get(key, function(data) {
+    var schedule = data[key];
     if (schedule) {
-      // console.log('found!');
-      // console.log(schedule);
+      console.log('\ngot schedule');
+      console.log(schedule);
+      console.log('\n');
       callback(schedule);
     } else {
-      // console.log('not found');
-      // schedule = newSchedule();
-      // saveSchedule(schedule);
-      // callback(schedule);
       callback(null);
     }
+  });
+}
+
+// get an array of all schedules
+function getSchedules(callback) {
+  chrome.storage.sync.get(['all_schedule_ids', 'current_schedule_id'], function(data) {
+    var allSchedules = [];
+    console.log(data);
+    if (data.all_schedule_ids && data.current_schedule_id) {
+
+      chrome.storage.sync.get(data.current_schedule_id, function(data) {
+        var current_schedule = data[data.current_schedule_id];
+        console.log('pushing current schedule onto list');
+        allSchedules.push(current_schedule);
+        console.log(allSchedules);
+
+        getSchedulesRecursive(allSchedules, data.all_schedule_ids, 0, callback);
+      });
+    }
+  });
+}
+
+function getSchedulesRecursive(allSchedules, allScheduleIds, index, callback) {
+  console.log(allScheduleIds);
+  // console.log('in recursive with index: ' + index + ' length: ' + allScheduleIds.length);
+  if (index < allScheduleIds.length) {
+    callback(allSchedules);
+  }
+
+  var schedule_id = allScheduleIds[index];
+  var key = "schedule-" + schedule_id;
+  chrome.storage.sync.get(key, function(data) {
+    var schedule = data[key];
+    if (schedule) {
+      allSchedules.push(schedule)
+    } else {
+      console.log('could not find a schedule in all schedule_ids')
+    }
+    getSchedulesRecursive(allSchedules, allScheduleIds, index + 1, callback)
   });
 }
 
@@ -174,30 +188,29 @@ function newSchedule(title) {
   }
 }
 
+// so the function belongs to the scope object.
+// allows me to use it on ember controllers
 scope.newSchedule = newSchedule;
 
 // save a schedule to chrome sync storage
 function saveSchedule(schedule, callback) {
-  var json = JSON.stringify(schedule);
-  // console.log('saving ' + json);
-  var key = "schedule-" + schedule.id;
-  console.log('saving schedule with key: ' + key);
-  console.log(schedule);
-  console.log('\n');
-
-  chrome.storage.sync.get('schedules', function(data) {
-    var schedules = data.schedules;
-    if (!schedules) {
-      schedules = {};
+  if (!schedule) {
+    if (callback) {
+      callback(null);
     }
-    schedules[key] = schedule;
-    chrome.storage.sync.set({'schedules': schedules}, function() {
-      // console.log('saved schedule');
-      // console.log(schedules);
+    return;
+  }
+
+  var key = "schedule-" + schedule.id;
+  var saving = {};
+  saving[key] = schedule;
+
+  chrome.storage.sync.set(saving, function() {
+    addScheduleKey(schedule, function() {
       notifier.sendNotification('update');
-      if (callback) {
-        callback(schedule);
-      }
+          if (callback) {
+            callback(schedule);
+          }
     });
   });
 }
@@ -205,7 +218,6 @@ function saveSchedule(schedule, callback) {
 // Math, Stats
 function createClass(name, colour) {
   // console.log('creating class: ' + name + ': ' + colour);
-
   return {
     id: ID(),
     name: name,

@@ -33,13 +33,6 @@ export default Ember.Controller.extend({
   },
 
   modelUpdate: function() {
-    console.log('model update');
-
-    var schedule = this.get('model');
-    if (schedule) {
-      this.set('schedule_string', JSON.stringify(schedule));
-    }
-
     var mades = this.get('mades');
     var made = mades[Math.floor(Math.random()*mades.length)];
 
@@ -49,7 +42,6 @@ export default Ember.Controller.extend({
     this.set('footer_message', message);
 
     getSchedules(function(schedules) {
-      console.log(schedules);
 
       if (schedules) {
         scope.this.set('current_schedule_id', getCurrentScheduleId());
@@ -67,13 +59,15 @@ export default Ember.Controller.extend({
         });
       }
     });
-  }.observes('model'),
+  }.observes('model').on('init'),
 
   titleChanged: function() {
     var schedules = this.get('schedules');
     if (schedules) {
       for (var i=0;i<schedules.length;i++) {
-        saveSchedule(schedules[i]);
+        saveSchedule(schedules[i], function() {
+          notifier.sendNotification('title_update');
+        });
       }
     }
   }.observes('schedules.@each.title'),
@@ -86,11 +80,9 @@ export default Ember.Controller.extend({
       var title = this.get('new_title');
       if (title) {
         var newSchedule = scope.newSchedule(title);
-        scope.addScheduleKey(newSchedule, function() {
-          scope.saveSchedule(newSchedule, function() {
-            scope.loadSchedule(newSchedule.id);
-            notifier.sendNotification('new');
-          });
+        scope.saveSchedule(newSchedule, function() {
+          scope.loadSchedule(newSchedule.id);
+          notifier.sendNotification('new');
         });
       }
     },

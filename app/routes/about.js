@@ -12,8 +12,6 @@ export default Ember.Route.extend({
       if (!schedule) {
         scope.this.transitionToRoute('index');
       }
-
-      scope.this.controllerFor('about').set('model', schedule);
     });
   }
 });
