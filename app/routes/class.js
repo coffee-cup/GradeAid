@@ -25,6 +25,7 @@ export default Ember.Route.extend({
         if (schedule.classes[i].id === params.class_id) {
           c = schedule.classes[i];
           schedule.last_class = c.id;
+          saveSchedule(schedule);
           break;
         }
       }

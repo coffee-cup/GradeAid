@@ -14,7 +14,7 @@ export default Ember.Controller.extend({
   import_error: "",
   current_schedule_id: null,
   schedule_string: "",
-  schedules: null,
+  otherSchedules: null,
   new_title: "",
 
   init: function() {
@@ -41,13 +41,14 @@ export default Ember.Controller.extend({
     var message = 'Made with ' + made + ' by ' + shuffled[0] + ', ' + shuffled[1] + ', and ' + shuffled[2];
     this.set('footer_message', message);
 
-    getSchedules(function(schedules) {
+    getSchedules(function(otherSchedules) {
 
-      if (schedules) {
+      if (otherSchedules) {
+
         scope.this.set('current_schedule_id', getCurrentScheduleId());
-        scope.this.set('schedules', schedules);
+        scope.this.set('otherSchedules', otherSchedules);
 
-        Ember.run.scheduleOnce('afterRender', this, function(){
+        Ember.run.scheduleOnce('afterRender', this, function() {
           var selectButton = Ember.$('#schedule-select-button').first();
           var selectDiv = Ember.$('#schedules-row').first();
           if (selectButton && selectDiv) {
@@ -61,16 +62,21 @@ export default Ember.Controller.extend({
     });
   }.observes('model').on('init'),
 
+  // called when a schedule title is changed
+  // do not need to send notification for this
   titleChanged: function() {
-    var schedules = this.get('schedules');
+    var schedules = this.get('otherSchedules');
     if (schedules) {
       for (var i=0;i<schedules.length;i++) {
-        saveSchedule(schedules[i], function() {
-          notifier.sendNotification('title_update');
-        });
+        saveSchedule(schedules[i]);
       }
     }
-  }.observes('schedules.@each.title'),
+
+    var schedule = this.get('model');
+    if (schedule) {
+      saveSchedule(schedule);
+    }
+  }.observes('otherSchedules.@each.title', 'model.title'),
 
   show_buy_us: false,
   bitcoin_address: '167gQGnatratDh4UJbXi63arMoLL3M92zA',
@@ -80,9 +86,12 @@ export default Ember.Controller.extend({
       var title = this.get('new_title');
       if (title) {
         var newSchedule = scope.newSchedule(title);
-        scope.saveSchedule(newSchedule, function() {
-          scope.loadSchedule(newSchedule.id);
-          notifier.sendNotification('new');
+        scope.addScheduleKey(newSchedule, function() {
+          scope.saveSchedule(newSchedule, function() {
+            scope.loadSchedule(newSchedule.id);
+            notifier.sendNotification('new');
+            scope.this.set('new_title', '');
+          });
         });
       }
     },

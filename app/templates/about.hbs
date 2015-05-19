@@ -2,7 +2,18 @@
     <div class="col s12 m6">
         <h2 class="center-align f-200">Schedules</h2>
         <div id="schedule-section" class="about-section">
-            {{#each schedule in schedules}}
+
+
+            <div id="schedules-row" class="row z-depth-1 click-area">
+                <div id="schedule-col" class="col s10 m8">
+                    {{input class="schedule-title-input" value=model.title placeholder="Schedule Title"}}
+                </div>
+                <div {{action 'selectSchedule' schedule.id}} id="schedule-select-button" class="select-button-class col s2 m4 right-align">
+                    <i class="mdi-hardware-keyboard-arrow-right"></i>
+                </div>
+            </div>
+
+            {{#each schedule in otherSchedules}}
             <div id="schedules-row" class="row z-depth-1 click-area">
                 <div id="schedule-col" class="col s10 m8">
                     {{input class="schedule-title-input" value=schedule.title placeholder="Schedule Title"}}

@@ -47,14 +47,16 @@ function setupSchedule(callback) {
     } else {
       // console.log('could not find current key');
       var newSchedule = scope.newSchedule();
-      saveSchedule(newSchedule, function() {
-        scope.current_schedule_id = newSchedule.id;
+      addScheduleKey(newSchedule, function() {
+        saveSchedule(newSchedule, function() {
+          scope.current_schedule_id = newSchedule.id;
         // console.log('created and saved new schedule');
         // console.log(newSchedule);
         chrome.storage.sync.set({'current_schedule_id': newSchedule.id}, function() {
           // console.log('set current schedule id and returning');
           callback(newSchedule);
         });
+      });
       });
     }
   });
@@ -69,17 +71,18 @@ function loadSchedule(schedule_id) {
 }
 
 function addScheduleKey(schedule, callback) {
-  console.log('told to add id ' + schedule.id);
   chrome.storage.sync.get('all_schedule_ids', function(data) {
-    console.log(data);
     var allScheduleIds = data.all_schedule_ids;
     if (!allScheduleIds) {
       allScheduleIds = [];
-      console.log('made new one');
     }
 
+    console.log('ALL SCHEDULE IDS');
+    console.log(allScheduleIds);
     if (allScheduleIds.indexOf(schedule.id)) {
       allScheduleIds.push(schedule.id);
+      console.log('ALL SCHEDULE IDS IS NOW');
+      console.log(allScheduleIds);
       chrome.storage.sync.set({'all_schedule_ids': allScheduleIds}, function() {
         if (callback) {
           callback();
@@ -125,9 +128,6 @@ function getScheduleWithId(schedule_id, callback) {
   chrome.storage.sync.get(key, function(data) {
     var schedule = data[key];
     if (schedule) {
-      console.log('\ngot schedule');
-      console.log(schedule);
-      console.log('\n');
       callback(schedule);
     } else {
       callback(null);
@@ -135,42 +135,43 @@ function getScheduleWithId(schedule_id, callback) {
   });
 }
 
-// get an array of all schedules
+// get an array of all but current schdules
 function getSchedules(callback) {
   chrome.storage.sync.get(['all_schedule_ids', 'current_schedule_id'], function(data) {
     var allSchedules = [];
-    console.log(data);
-    if (data.all_schedule_ids && data.current_schedule_id) {
-
-      chrome.storage.sync.get(data.current_schedule_id, function(data) {
-        var current_schedule = data[data.current_schedule_id];
-        console.log('pushing current schedule onto list');
-        allSchedules.push(current_schedule);
-        console.log(allSchedules);
-
-        getSchedulesRecursive(allSchedules, data.all_schedule_ids, 0, callback);
+    var allScheduleIds = data.all_schedule_ids;
+    var currentScheduleId = data.current_schedule_id
+    console.log('ALL SCHEDULE IDS');
+    console.log(allScheduleIds);
+    if (allScheduleIds && currentScheduleId) {
+      chrome.storage.sync.get(currentScheduleId, function(data) {
+        getSchedulesRecursive(allSchedules, allScheduleIds, currentScheduleId, 0, callback);
       });
     }
   });
 }
 
-function getSchedulesRecursive(allSchedules, allScheduleIds, index, callback) {
+// recursive function to get all get all but current schedule
+// callback called with array of all schedules but current
+function getSchedulesRecursive(allSchedules, allScheduleIds, currentScheduleId, index, callback) {
+  console.log('in recursive with index: ' + index);
   console.log(allScheduleIds);
-  // console.log('in recursive with index: ' + index + ' length: ' + allScheduleIds.length);
-  if (index < allScheduleIds.length) {
+  if (index >= allScheduleIds.length) {
     callback(allSchedules);
+    return;
   }
 
   var schedule_id = allScheduleIds[index];
   var key = "schedule-" + schedule_id;
   chrome.storage.sync.get(key, function(data) {
     var schedule = data[key];
-    if (schedule) {
-      allSchedules.push(schedule)
+    if (schedule && schedule.id != currentScheduleId) {
+      allSchedules.push(schedule);
     } else {
-      console.log('could not find a schedule in all schedule_ids')
+      console.log('could not find a schedule in all schedule_ids');
     }
-    getSchedulesRecursive(allSchedules, allScheduleIds, index + 1, callback)
+
+    getSchedulesRecursive(allSchedules, allScheduleIds, currentScheduleId, index + 1, callback);
   });
 }
 
@@ -206,13 +207,13 @@ function saveSchedule(schedule, callback) {
   saving[key] = schedule;
 
   chrome.storage.sync.set(saving, function() {
-    addScheduleKey(schedule, function() {
+    // addScheduleKey(schedule, function() {
       notifier.sendNotification('update');
-          if (callback) {
-            callback(schedule);
-          }
-    });
-  });
+      if (callback) {
+        callback(schedule);
+      }
+    // });
+});
 }
 
 // Math, Stats
