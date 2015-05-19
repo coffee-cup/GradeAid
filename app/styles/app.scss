@@ -200,6 +200,10 @@ nav {
     }
   }
 }
+#schedule-current {
+  background-color: $sub_color;
+  color: white;
+}
 #schedule-section {
   border-right: solid 1px $nav_color;
   padding-right: 4em;

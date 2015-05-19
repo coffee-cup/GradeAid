@@ -77,12 +77,8 @@ function addScheduleKey(schedule, callback) {
       allScheduleIds = [];
     }
 
-    console.log('ALL SCHEDULE IDS');
-    console.log(allScheduleIds);
     if (allScheduleIds.indexOf(schedule.id)) {
       allScheduleIds.push(schedule.id);
-      console.log('ALL SCHEDULE IDS IS NOW');
-      console.log(allScheduleIds);
       chrome.storage.sync.set({'all_schedule_ids': allScheduleIds}, function() {
         if (callback) {
           callback();

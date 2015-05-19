@@ -47,17 +47,6 @@ export default Ember.Controller.extend({
 
         scope.this.set('current_schedule_id', getCurrentScheduleId());
         scope.this.set('otherSchedules', otherSchedules);
-
-        Ember.run.scheduleOnce('afterRender', this, function() {
-          var selectButton = Ember.$('#schedule-select-button').first();
-          var selectDiv = Ember.$('#schedules-row').first();
-          if (selectButton && selectDiv) {
-            selectButton.css('display', 'none');
-            selectDiv.css('cursor', 'default');
-            selectDiv.css('background-color', '#FF3A37');
-            selectDiv.css('color', 'white');
-          }
-        });
       }
     });
   }.observes('model').on('init'),
@@ -97,7 +86,7 @@ export default Ember.Controller.extend({
     },
 
     selectSchedule: function(schedule_id) {
-      var schedules = this.get('schedules');
+      var schedules = this.get('otherSchedules');
       if (schedules) {
         for (var i=0;i<schedules.length;i++) {
           if (schedules[i].id === schedule_id) {

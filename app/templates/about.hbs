@@ -4,12 +4,9 @@
         <div id="schedule-section" class="about-section">
 
 
-            <div id="schedules-row" class="row z-depth-1 click-area">
+            <div id="schedule-current" class="row z-depth-1 click-area">
                 <div id="schedule-col" class="col s10 m8">
                     {{input class="schedule-title-input" value=model.title placeholder="Schedule Title"}}
-                </div>
-                <div {{action 'selectSchedule' schedule.id}} id="schedule-select-button" class="select-button-class col s2 m4 right-align">
-                    <i class="mdi-hardware-keyboard-arrow-right"></i>
                 </div>
             </div>
 
