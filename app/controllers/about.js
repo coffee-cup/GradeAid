@@ -42,9 +42,7 @@ export default Ember.Controller.extend({
     this.set('footer_message', message);
 
     getSchedules(function(otherSchedules) {
-
       if (otherSchedules) {
-
         scope.this.set('current_schedule_id', getCurrentScheduleId());
         scope.this.set('otherSchedules', otherSchedules);
       }
@@ -71,6 +69,18 @@ export default Ember.Controller.extend({
   bitcoin_address: '167gQGnatratDh4UJbXi63arMoLL3M92zA',
 
   actions: {
+    deleteSchedule: function(schedule_id) {
+      deleteSchedule(schedule_id, function(success) {
+        if(success) {
+          getSchedules(function(otherSchedules) {
+            if (otherSchedules) {
+              scope.this.set('otherSchedules', otherSchedules);
+            }
+          });
+        }
+      });
+    },
+
     createNew: function() {
       var title = this.get('new_title');
       if (title) {

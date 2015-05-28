@@ -201,7 +201,9 @@ nav {
   }
 }
 #schedule-current {
-  background-color: $sub_color;
+  #schedule-col {
+    background-color: $sub_color;
+  }
   color: white;
 }
 #schedule-section {
@@ -254,6 +256,10 @@ nav {
 }
 #schedule-select-button {
   font-size: 3em;
+  margin-top: 0.2em;
+}
+#schedule-delete-button {
+  font-size: 2em;
   margin-top: 0.2em;
 }
 #custom-footer {

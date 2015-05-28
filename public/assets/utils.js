@@ -77,7 +77,7 @@ function addScheduleKey(schedule, callback) {
       allScheduleIds = [];
     }
 
-    if (allScheduleIds.indexOf(schedule.id)) {
+    if (allScheduleIds.indexOf(schedule.id) == -1) {
       allScheduleIds.push(schedule.id);
       chrome.storage.sync.set({'all_schedule_ids': allScheduleIds}, function() {
         if (callback) {
@@ -110,6 +110,45 @@ function getSchedule(callback) {
   }
 }
 
+// delete a schedule with id
+// callback called with either true or false,
+// depending on if delete worked
+function deleteSchedule(schedule_id, callback) {
+  var key = 'schedule-' + schedule_id;
+
+  chrome.storage.sync.remove(key, function() {
+    if (chrome.runtime.lastError) {
+      console.log('error removing schedule');
+      callback(false);
+      return;
+    }
+
+    chrome.storage.sync.get('all_schedule_ids', function(data) {
+      var allScheduleIds = data.all_schedule_ids;
+      if (allScheduleIds) {
+
+        // find the schedule id in all schedule ids
+        // and remove it
+        var index = allScheduleIds.indexOf(schedule_id);
+        if (index != -1) {
+          allScheduleIds.splice(index, 1);
+          chrome.storage.sync.set({'all_schedule_ids': allScheduleIds}, function() {
+            callback(true);
+          });
+        } else {
+          callback(true);
+        }
+      }
+    });
+  });
+
+  chrome.storage.sync.get(key, function(data) {
+    var schedule = data[key];
+    console.log('\n\nIN DELETE FUNCTION');
+    console.log(schedule);
+  });
+}
+
 // gets the current schedule id
 function getCurrentScheduleId() {
   return scope.current_schedule_id;
@@ -137,8 +176,6 @@ function getSchedules(callback) {
     var allSchedules = [];
     var allScheduleIds = data.all_schedule_ids;
     var currentScheduleId = data.current_schedule_id
-    console.log('ALL SCHEDULE IDS');
-    console.log(allScheduleIds);
     if (allScheduleIds && currentScheduleId) {
       chrome.storage.sync.get(currentScheduleId, function(data) {
         getSchedulesRecursive(allSchedules, allScheduleIds, currentScheduleId, 0, callback);

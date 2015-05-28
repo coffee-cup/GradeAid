@@ -3,19 +3,24 @@
         <h2 class="center-align f-200">Schedules</h2>
         <div id="schedule-section" class="about-section">
 
-
-            <div id="schedule-current" class="row z-depth-1 click-area">
-                <div id="schedule-col" class="col s10 m8">
+            <div id="schedule-current" class="row click-area">
+                <div id="schedule-col" class="col s10 m8 offset-s1 offset-m2 z-depth-1">
                     {{input class="schedule-title-input" value=model.title placeholder="Schedule Title"}}
                 </div>
             </div>
 
             {{#each schedule in otherSchedules}}
-            <div id="schedules-row" class="row z-depth-1 click-area">
-                <div id="schedule-col" class="col s10 m8">
+            <div id="schedules-row" class="row click-area">
+
+                <div {{action 'deleteSchedule' schedule.id}} class="col s1 m2" id="schedule-delete-button">
+                    <i class="mdi-content-clear"></i>
+                </div>
+
+                <div id="schedule-col" class="col s10 m8 z-depth-1">
                     {{input class="schedule-title-input" value=schedule.title placeholder="Schedule Title"}}
                 </div>
-                <div {{action 'selectSchedule' schedule.id}} id="schedule-select-button" class="select-button-class col s2 m4 right-align">
+
+                <div {{action 'selectSchedule' schedule.id}} id="schedule-select-button" class="select-button-class col s1 m2 right-align">
                     <i class="mdi-hardware-keyboard-arrow-right"></i>
                 </div>
             </div>
