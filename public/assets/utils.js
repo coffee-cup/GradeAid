@@ -1,3 +1,5 @@
+var storage = chrome.storage.local;
+
 var ID = function () {
   // Math.random should be unique because of its seeding algorithm.
   // Convert it to base 36 (numbers + letters), and grab the first 9 characters
@@ -37,7 +39,7 @@ var scope = {
 
 function setupSchedule(callback) {
   // console.log('setting up');
-  chrome.storage.sync.get('current_schedule_id', function(key) {
+  storage.get('current_schedule_id', function(key) {
     var key = key.current_schedule_id;
     if (key) {
       // console.log('found current schedule key')
@@ -52,7 +54,7 @@ function setupSchedule(callback) {
           scope.current_schedule_id = newSchedule.id;
         // console.log('created and saved new schedule');
         // console.log(newSchedule);
-        chrome.storage.sync.set({'current_schedule_id': newSchedule.id}, function() {
+        storage.set({'current_schedule_id': newSchedule.id}, function() {
           // console.log('set current schedule id and returning');
           callback(newSchedule);
         });
@@ -65,13 +67,13 @@ function setupSchedule(callback) {
 function loadSchedule(schedule_id) {
   scope.current_schedule_id = schedule_id;
   console.log('set current_schedule_id to ' + scope.current_schedule_id);
-  chrome.storage.sync.set({'current_schedule_id': schedule_id}, function() {
+  storage.set({'current_schedule_id': schedule_id}, function() {
     notifier.sendNotification('update');
   });
 }
 
 function addScheduleKey(schedule, callback) {
-  chrome.storage.sync.get('all_schedule_ids', function(data) {
+  storage.get('all_schedule_ids', function(data) {
     var allScheduleIds = data.all_schedule_ids;
     if (!allScheduleIds) {
       allScheduleIds = [];
@@ -79,7 +81,7 @@ function addScheduleKey(schedule, callback) {
 
     if (allScheduleIds.indexOf(schedule.id) == -1) {
       allScheduleIds.push(schedule.id);
-      chrome.storage.sync.set({'all_schedule_ids': allScheduleIds}, function() {
+      storage.set({'all_schedule_ids': allScheduleIds}, function() {
         if (callback) {
           callback();
         }
@@ -116,14 +118,14 @@ function getSchedule(callback) {
 function deleteSchedule(schedule_id, callback) {
   var key = 'schedule-' + schedule_id;
 
-  chrome.storage.sync.remove(key, function() {
+  storage.remove(key, function() {
     if (chrome.runtime.lastError) {
       console.log('error removing schedule');
       callback(false);
       return;
     }
 
-    chrome.storage.sync.get('all_schedule_ids', function(data) {
+    storage.get('all_schedule_ids', function(data) {
       var allScheduleIds = data.all_schedule_ids;
       if (allScheduleIds) {
 
@@ -132,7 +134,7 @@ function deleteSchedule(schedule_id, callback) {
         var index = allScheduleIds.indexOf(schedule_id);
         if (index != -1) {
           allScheduleIds.splice(index, 1);
-          chrome.storage.sync.set({'all_schedule_ids': allScheduleIds}, function() {
+          storage.set({'all_schedule_ids': allScheduleIds}, function() {
             callback(true);
           });
         } else {
@@ -142,7 +144,7 @@ function deleteSchedule(schedule_id, callback) {
     });
   });
 
-  chrome.storage.sync.get(key, function(data) {
+  storage.get(key, function(data) {
     var schedule = data[key];
     console.log('\n\nIN DELETE FUNCTION');
     console.log(schedule);
@@ -160,7 +162,7 @@ function getScheduleWithId(schedule_id, callback) {
   var key = "schedule-" + schedule_id;
 
   console.log('trying to get schedule with key ' + key);
-  chrome.storage.sync.get(key, function(data) {
+  storage.get(key, function(data) {
     var schedule = data[key];
     if (schedule) {
       callback(schedule);
@@ -172,12 +174,12 @@ function getScheduleWithId(schedule_id, callback) {
 
 // get an array of all but current schdules
 function getSchedules(callback) {
-  chrome.storage.sync.get(['all_schedule_ids', 'current_schedule_id'], function(data) {
+  storage.get(['all_schedule_ids', 'current_schedule_id'], function(data) {
     var allSchedules = [];
     var allScheduleIds = data.all_schedule_ids;
     var currentScheduleId = data.current_schedule_id
     if (allScheduleIds && currentScheduleId) {
-      chrome.storage.sync.get(currentScheduleId, function(data) {
+      storage.get(currentScheduleId, function(data) {
         getSchedulesRecursive(allSchedules, allScheduleIds, currentScheduleId, 0, callback);
       });
     }
@@ -196,7 +198,7 @@ function getSchedulesRecursive(allSchedules, allScheduleIds, currentScheduleId, 
 
   var schedule_id = allScheduleIds[index];
   var key = "schedule-" + schedule_id;
-  chrome.storage.sync.get(key, function(data) {
+  storage.get(key, function(data) {
     var schedule = data[key];
     if (schedule && schedule.id != currentScheduleId) {
       allSchedules.push(schedule);
@@ -239,7 +241,7 @@ function saveSchedule(schedule, callback) {
   var saving = {};
   saving[key] = schedule;
 
-  chrome.storage.sync.set(saving, function() {
+  storage.set(saving, function() {
     // addScheduleKey(schedule, function() {
       notifier.sendNotification('update');
       if (callback) {
