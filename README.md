@@ -1,9 +1,18 @@
 #GradeAid
+=======
+##Simple and beautiful grade manager
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-Can be installed as Chrome App here - [here](http://example.com/ "GradeAid")
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+Chrome App that manages your grades and classes in a simple interface.
+It calculates what you need to get on your assignments and exams to reach your target grade.
 
 Uses the Chrome App Platform as backend and EmberJS to render views.
+
+####Classes
+![page screenshot](https://raw.githubusercontent.com/coffee-cup/GradeAid/master/screenshots/Capture1.PNG)
+
+![page screenshot](https://raw.githubusercontent.com/coffee-cup/GradeAid/master/screenshots/Capture5.PNG)
+
+![page screenshot](https://raw.githubusercontent.com/coffee-cup/GradeAid/master/screenshots/Capture3.PNG)
+
+####Add Class
+![page screenshot](https://raw.githubusercontent.com/coffee-cup/GradeAid/master/screenshots/Capture2.PNG)
