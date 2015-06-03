@@ -1,6 +1,6 @@
 #GradeAid
 
-##Simple and beautiful grade manager
+##Simple and beautiful grade calculator
 
 Chrome App that manages your grades and classes in a simple interface.
 It calculates what you need to get on your assignments and exams to reach your target grade.
