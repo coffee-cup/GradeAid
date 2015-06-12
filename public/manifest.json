@@ -4,7 +4,7 @@
   "short_name": "GradeAid",
   "description": "Manage your grades and classes in a friendly interface. Know what you need to reach your target grade.
 ",
-  "version": "0.6",
+  "version": "0.61",
   "minimum_chrome_version": "23",
   "icons": {
     "16": "assets/icons/icon16.png",
