@@ -13,23 +13,34 @@ function calculateNeeded(mark, current_grade, total_weight) {
   }
 
   return [
-  neededFor(mark.weight, current_grade, 50),
-  neededFor(mark.weight, current_grade, 60),
-  neededFor(mark.weight, current_grade, 70),
-  neededFor(mark.weight, current_grade, 80),
-  neededFor(mark.weight, current_grade, 90)
+    neededFor(mark.weight, total_weight, current_grade, 50),
+    neededFor(mark.weight, total_weight, current_grade, 60),
+    neededFor(mark.weight, total_weight, current_grade, 70),
+    neededFor(mark.weight, total_weight, current_grade, 80),
+    neededFor(mark.weight, total_weight, current_grade, 90)
     // neededFor(mark.weight, current_grade, 100)
     ];
   }
 
 // calculates what you need to get on mark to have f overall
 // pass in all values as percent (i.e. between 0 and 100)
-function neededFor(weight, current_grade, f) {
+function neededFor(weight, total_weight, current_grade, f) {
   // weights in decimal (< 1), grades in percent (0 < g < 100)
+
+  console.log('WEIGHT: ' + weight);
+  console.log('TOTAL_WEIGHT: ' + total_weight);
+  console.log('CURRENT_GRADE: ' + current_grade);
+
+  total_weight = total_weight / 100;
   weight = weight / 100;
-  var grade = (f - current_grade) / weight;
+
+  var overall_grade = current_grade * total_weight;
+
+  var weights = total_weight + weight;
+  var need = ((f * weights) - overall_grade) / weight;
+
   // console.log('to get a ' + f + ' you need a ' + grade);
-  return {'grade': grade.toFixed(0), 'final': f};
+  return {'grade': need.toFixed(0), 'final': f};
 }
 
 var scope = {
@@ -271,7 +282,7 @@ function createMark(title) {
   return {
     id: ID(),
     title: title,
-    grade: 0,
+    grade: null,
     total: 100,
     total_grade: 0,
     weight: 0,
