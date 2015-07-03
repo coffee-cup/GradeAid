@@ -12,7 +12,6 @@ export default Ember.Controller.extend({
     scope.this = this;
 
     notifier.addListener('title_update', function() {
-      console.log('yo fuckers');
       getSchedule(function(schedule) {
         scope.this.set('model', schedule);
       });
@@ -59,9 +58,15 @@ export default Ember.Controller.extend({
       return;
     }
 
-    // the grade was changed so re-calculate the total class grade
-    var total_grade = 0;
+    // the total weight of all marks that have a grade inputed
     var total_weight = 0;
+
+    // the total weight of all marks that have been created
+    var summed_weight = 0;
+
+    // the total grade overall for the entire semester
+    var total_grade = 0;
+
     for (var i=0;i<c.marks.length;i++) {
       var m = c.marks[i];
 
@@ -69,11 +74,13 @@ export default Ember.Controller.extend({
       var total = parseInt(m.total);
       var weight = parseFloat(m.weight);
 
-      if (!grade) {grade = 0;}
+      summed_weight += weight;
+
+      // if the grade is null then do not consider it in grade calculation
+      if (!grade) {continue;}
+
       if (!total) {total = 0;}
       if (!weight) {weight = 0;}
-
-      total_weight += weight;
 
       var percent = (grade / total);
 
@@ -81,12 +88,16 @@ export default Ember.Controller.extend({
         percent = 0;
       }
 
-      var relative_grade = percent * weight;
-      total_grade += relative_grade;
+      total_weight += weight;
+      total_grade += percent * weight;
     }
 
-    if (total_weight != 100) {
-      this.set('error', 'Weights do not sum to 100');
+    total_weight = total_weight.toFixed(2);
+    summed_weight = summed_weight.toFixed(2);
+
+    // check if weights of all created marks sum to 100
+    if (summed_weight != 100) {
+      this.set('error', 'Weights do not sum to 100, Current: ' + summed_weight);
     } else {
       this.set('error', '');
     }
@@ -96,19 +107,25 @@ export default Ember.Controller.extend({
       total_grade = 100;
     }
 
+    // prevent division by zero
+    var relative_grade = 0;
+    if (total_weight != 0) {
+      relative_grade = total_grade / (total_weight / 100);
+      relative_grade = relative_grade.toFixed(1);
+    }
+
     // if the total grade is valid, calculate what is neeed to get 50-90%
     if (active_mark) {
-      if (active_mark.weight && active_mark.weight > 0 && (!active_mark.grade || active_mark.grade == 0)) {
+      if (active_mark.weight && active_mark.weight > 0 && !active_mark.grade) {
         var needed = active_mark.needed;
-        var needs = calculateNeeded(active_mark, total_grade, total_weight);
+        var needs = calculateNeeded(active_mark, relative_grade, total_weight);
         this.set('active_mark.needed', needs);
       } else {
         this.set('active_mark.needed', []);
       }
     }
 
-    // c.grade = total_grade;
-    this.set('class.grade', total_grade);
+    this.set('class.grade', relative_grade);
     this.set('class.total_weight', total_weight);
 
     if (active_mark) {
@@ -125,7 +142,7 @@ export default Ember.Controller.extend({
       var want = active_mark.need_input_want;
       if (want && active_mark.weight) {
         // neededFor(weight, current_grade, f)
-        var need = neededFor(active_mark.weight, c.grade, want)
+        var need = neededFor(active_mark.weight, c.total_weight, c.grade, want)
         this.set('active_mark.need_input_need', need.grade);
       } else {
         this.set('active_mark.need_input_need', null);
@@ -209,4 +226,3 @@ export default Ember.Controller.extend({
     }
   }
 });
-
