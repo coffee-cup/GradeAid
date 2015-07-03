@@ -27,10 +27,6 @@ function calculateNeeded(mark, current_grade, total_weight) {
 function neededFor(weight, total_weight, current_grade, f) {
   // weights in decimal (< 1), grades in percent (0 < g < 100)
 
-  console.log('WEIGHT: ' + weight);
-  console.log('TOTAL_WEIGHT: ' + total_weight);
-  console.log('CURRENT_GRADE: ' + current_grade);
-
   total_weight = total_weight / 100;
   weight = weight / 100;
 
