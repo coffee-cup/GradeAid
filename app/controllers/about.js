@@ -3,7 +3,7 @@ import Ember from 'ember';
 var scope = {
   this: null,
   newSchedule: null,
-}
+};
 
 export default Ember.Controller.extend({
 
@@ -122,7 +122,7 @@ export default Ember.Controller.extend({
       if (newScheduleString) {
         var json = null;
         try {
-          var json = JSON.parse(newScheduleString);
+          json = JSON.parse(newScheduleString);
         } catch (err) {
           this.set('import_error', 'invalid schedule');
         }
@@ -137,4 +137,3 @@ export default Ember.Controller.extend({
     }
   }
 });
-
