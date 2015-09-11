@@ -22,3 +22,4 @@ test
 chrome_app_images/SmallTile.png
 chrome_app_images/SmallTile.ai
 .remote-sync.json
+*.sublime-workspace
