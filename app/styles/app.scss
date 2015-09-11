@@ -118,7 +118,7 @@ html {
   margin-bottom: 0;
 }
 #bitcoin-input {
-  width: 250px;
+  width: 270px;
   height: 35px;
   font-size: 1.2em;
   border-bottom: none;
@@ -269,6 +269,11 @@ nav {
   bottom: 0;
   background-color: $footer_color;
   padding-top: 0;
+
+  a {
+    text-decoration: underline;
+    color: white;
+  }
 }
 #footer-row {
   margin-bottom: 0;

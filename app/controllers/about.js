@@ -8,7 +8,7 @@ var scope = {
 export default Ember.Controller.extend({
 
   schedule_import: null,
-  authors: ["Jake", "Abhi", "Tyson"],
+  authors: ["<a href='http://jakerunzer.xyz' target='_blank'>Jake</a>", "Abhi", "Tyson"],
   mades: ['Love', 'Happiness', 'Code', 'Molecules', 'Science', 'a Computer', 'a Dinosaur', 'Zest'],
   footer_message: "",
   import_error: "",
